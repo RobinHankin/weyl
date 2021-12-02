@@ -1,0 +1,4 @@
+exportPattern("^[[:alpha:]]+")
+S3method(Ops,weyl)
+importFrom("disordR","elements")
+import("spray")
