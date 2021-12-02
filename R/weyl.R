@@ -29,3 +29,11 @@
         return(weyl(out))
     }
 }
+
+`constant<-.weyl` <- function(x,value){
+    class(x) <- setdiff(class(x),"weyl")
+    constant(x) <- value
+    return(weyl(x))
+}
+
+
