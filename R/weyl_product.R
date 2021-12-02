@@ -75,17 +75,26 @@
     stopifnot(arity(S1) == arity(S2))
     stopifnot(arity(S1)%%2 == 0) # must be even
     n <- arity(S1)/2
-
     out <-
-        Reduce(spraycross,
+        Reduce(spraycross2,
                sapply(seq_len(arity(S1)/2),
                       function(i){
+                          coeffs(S1) <- 1
+                          coeffs(S2) <- 1
                           weyl_prod_multivariate_onerow_singlecolumn(S1,S2,i)
                       },simplify=FALSE
                       )
                )
-    ## Now rearrange rows so we have x1,...,xn,d1,...,dn    
-    return(spray(index(out)[,c(matrix(seq_len(n*2),nrow=2,byrow=TRUE))],elements(coeffs(out))))
+
+    ## re-insert coefficient:
+    out <- out*coeffs(S1)*coeffs(S2)
+
+    ## Now rearrange columns, so we have x1,...,xn,d1,...,dn [rather
+    ## than x1,d1,x2,d2,...xn,dn]:
+    out <- spray(index(out)[,c(matrix(seq_len(n*2),nrow=2,byrow=TRUE))],elements(coeffs(out)))
+    
+    return(weyl(out))
+    
 }
 
 `weyl_prod_multivariate_nrow_allcolumns`  <- function(S1,S2){
