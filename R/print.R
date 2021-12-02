@@ -1,4 +1,5 @@
 `print.weyl` <- function(x,...){
+    cat("A member of the Weyl algebra:\n")
     jj <- getOption("weylvars")   # typically c("x","y","z")
     if(!is.null(jj)){  
         options("sprayvars" = c(jj,paste("d",jj,sep="")))

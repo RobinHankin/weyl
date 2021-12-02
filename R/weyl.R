@@ -14,3 +14,18 @@
     weyl(rspray(n = n, vals = vals, arity = arity, powers = powers))
 }
 
+`coeffs<-.weyl` <- function(S,value){
+    class(S) <- setdiff(class(S),"weyl")
+    coeffs(S) <- value
+    return(weyl(S))
+}
+
+`constant.weyl` <- function(x,drop=FALSE){
+    class(x) <- setdiff(class(x),"weyl")
+    out <- constant(x,drop=FALSE)
+    if(drop){
+        return(drop(out))
+    } else {
+        return(weyl(out))
+    }
+}

@@ -4,3 +4,7 @@ importFrom("disordR","elements")
 import("spray")
 
 S3method(print,weyl)
+S3method("coeffs<-",weyl)
+
+S3method(constant,weyl)
+S3method("constant<-",weyl)
