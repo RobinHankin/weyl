@@ -10,7 +10,7 @@
     return(Recall(a,b-1,c,d+1) + c*Recall(a,b-1,c-1,d))
 }
 
-`weyl_prod_univariate_onerow` <- function(S1,S2){ # S1,S2 are spray objects
+`weyl_prod_univariate_onerow` <- function(S1,S2){ # (S1,S2 are spray objects)
                                         # univariate Weyl product; but
                                         # S1 and S2 must have just one
                                         # row; compare weyl_prod()
@@ -118,3 +118,19 @@
     return(out)
 }
 
+`weyl_power_scalar` <- function(S,n){
+  stopifnot(n==round(n))
+  if(n<0){
+      stop("use ooom() for negative powers")
+  } else if(n==0){
+      return(one(S))
+  } else if(n==1){
+      return(S)
+  } else { # n>1
+      out <- S
+      for(i in seq_len(n-1)){
+          out <- out*S
+      }
+      return(out)
+  }
+}

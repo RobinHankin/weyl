@@ -10,8 +10,10 @@
     return(TRUE)
 }
 
-`rweyl` <- function(n = 9, vals = seq_len(n), arity = 4, powers = 0:2){
-    weyl(rspray(n = n, vals = vals, arity = arity, powers = powers))
+`is.weyl` <- function(x){inherits(x,"weyl")}
+
+`rweyl` <- function(n = 3, vals = seq_len(n), dim = 3, powers = 0:2){
+    weyl(rspray(n = n, vals = vals, arity = dim*2, powers = powers))
 }
 
 `coeffs<-.weyl` <- function(S,value){
@@ -36,4 +38,17 @@
     return(weyl(x))
 }
 
+`as.one` <- function(x,dim){
+    if(is.weyl(x)){
+        return(spray(index(x)*0,1))
+    } else {
+        return(weyl(spray(rbind(0,dim*2)),1))
+    }
+}
+
+
+
+setGeneric("dim")
+
+`dim.weyl` <- function(x){ arity(x)/2}
 
