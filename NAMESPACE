@@ -8,3 +8,6 @@ S3method("coeffs<-",weyl)
 
 S3method(constant,weyl)
 S3method("constant<-",weyl)
+
+S3method(dim,weyl)
+
