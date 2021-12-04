@@ -91,8 +91,8 @@
 
     ## Now rearrange columns, so we have x1,...,xn,d1,...,dn [rather
     ## than x1,d1,x2,d2,...xn,dn]:
-    out <- spray(index(out)[,c(matrix(seq_len(n*2),nrow=2,byrow=TRUE))],elements(coeffs(out)))
-    
+    out <- spray(index(out)[,c(t(matrix(seq_len(n*2),nrow=2)))],elements(coeffs(out)))
+
     return(weyl(out))
     
 }
