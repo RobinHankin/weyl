@@ -62,3 +62,5 @@ setMethod("drop","weyl", function(x){
         return(x)
     }
 })
+
+`deg` <- function(S){max(rowSums(index(S)))} # following Coutinho
