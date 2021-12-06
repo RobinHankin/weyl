@@ -4,21 +4,42 @@
     return(M)
 }
 
-`weyl_prod_helper` <- function(a,b,c,d){
+`weyl_prod_helper1` <- function(a,b,c,d){
     if(c==0){return(spray(cbind(a,b+d)))}
     if(b==0){return(spray(cbind(a+c,d)))}
     return(Recall(a,b-1,c,d+1) + c*Recall(a,b-1,c-1,d))
 }
 
-`weyl_prod_univariate_onerow` <- function(S1,S2){ # (S1,S2 are spray objects)
+`weyl_prod_helper2` <- function(a,b,c,d){
+    f <- function(r){spray(cbind(a+c-r,b+d-r),factorial(r)*choose(b,r)*choose(c,r))}
+    out <- 0
+    for(r in 0:b){out <- out + f(r)}
+    return(out)
+}
+
+`weyl_prod_helper3` <- function(a,b,c,d){
+    f <- function(r){factorial(r)*choose(b,r)*choose(c,r)}
+    ind <- numeric(0)
+    val <- numeric(0)
+    for(r in 0:b){
+        ind <- rbind(ind,c(a+c-r,b+d-r))
+        val <- c(val,f(r))
+    }
+    spray(ind,val,addrepeats=TRUE)
+}
+    
+`weyl_prod_univariate_onerow` <- function(S1,S2,func){
+                                        # (S1,S2 are spray objects)
                                         # univariate Weyl product; but
                                         # S1 and S2 must have just one
                                         # row; compare weyl_prod()
+
+    func <- getOption("prodfunc",default = weyl_prod_helper3)
     stopifnot(arity(S1)==2)
     stopifnot(arity(S2)==2)
     stopifnot(length(coeffs(S1))==1)
     stopifnot(length(coeffs(S2))==1)
-    return(weyl_prod_helper(
+    return(func(
         index(S1)[1,1],index(S1)[1,2],
         index(S2)[1,1],index(S2)[1,2]
     ) * coeffs(S1)*coeffs(S2))
@@ -134,3 +155,5 @@
       return(out)
   }
 }
+
+
