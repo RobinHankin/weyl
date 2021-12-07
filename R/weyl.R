@@ -67,7 +67,7 @@ setMethod("drop","weyl", function(x){
     }
 })
 
-`deg` <- function(S){max(rowSums(index(S)))} # following Coutinho
+`deg` <- function(S){max(c(-Inf,rowSums(index(S))))} # following Coutinho
 `zero` <- function(d){weyl(spray(matrix(0,0,2*d),numeric(0)))}
 
 `as.der` <- function(S){function(x){S*x-x*S}}

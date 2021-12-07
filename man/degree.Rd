@@ -26,6 +26,9 @@
 \usage{deg(S)}
 \arguments{\item{S}{Object of class \code{weyl}}}
 \author{Robin K. S. Hankin}
+\note{The degree of the zero object is conventionally
+  \mjeqn{-\infty}{-infinity}.
+}
 \examples{
 
 d1 <- rweyl(n=2)
