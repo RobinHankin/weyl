@@ -14,7 +14,7 @@
   the \pkg{clifford} package.
 
   Coutinho calls this the \dfn{symbol map}. 
-
+}
 \usage{
 grade(C, n, drop=TRUE)
 grade(C,n) <- value
