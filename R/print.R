@@ -20,6 +20,6 @@
     } else {
         out <- print_spray_matrixform(x)
     }
-    return(out)
+    return(weyl(out))
 }
 

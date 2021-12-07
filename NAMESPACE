@@ -2,12 +2,13 @@ exportPattern("^[[:alpha:]]+")
 S3method(Ops,weyl)
 importFrom("disordR","elements")
 import("spray")
+import("mathjaxr")
+import("methods")
 
 S3method(print,weyl)
-S3method("coeffs<-",weyl)
-
 S3method(constant,weyl)
 S3method("constant<-",weyl)
+S3method("coeffs<-",weyl)
 
 S3method(dim,weyl)
 

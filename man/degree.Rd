@@ -1,0 +1,40 @@
+\name{degree}
+\alias{deg}
+\alias{degree}
+\title{The degree of a \code{weyl} object}
+\description{\loadmathjax
+
+  The \dfn{degree} of a monomial weyl object
+  \mjeqn{x^a\partial^b}{omitted} is defined as \mjseqn{a+b}.  The degree
+  of a general weyl object expressed as a linear combination of
+  monimials is the maximum of the degrees of these monomials.  Following
+  Coutinho we have:
+
+  \itemize{
+  \item
+  \mjeqn{\mathrm{deg}(d_1+d_2)\leq\max(\mathrm{deg}(d_1)+
+    \mathrm{deg}(d_2))}{omitted}
+  \item
+  \mjeqn{\mathrm{deg}(d_1d_2) = \mathrm{deg}(d_1)+
+    \mathrm{deg}(d_2)}{omitted}
+  \item
+  \mjeqn{\mathrm{deg}(d_1d_2-d_2d_1)\leq\mathrm{deg}(d_1)+
+    \mathrm{deg}(d_2)-2}{omitted}
+}
+}
+
+\usage{deg(S)}
+\arguments{\item{S}{Object of class \code{weyl}}}
+\author{Robin K. S. Hankin}
+\examples{
+
+d1 <- rweyl(n=2)
+d2 <- rweyl(n=2)
+
+deg(d1+d2) <= deg(d1) + deg(d2)
+deg(d1*d2) == deg(d1) + deg(d2)
+deg(d1*d2-d2*d1) <= deg(d1) + deg(d2) -2
+
+}
+
+

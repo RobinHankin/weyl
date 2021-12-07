@@ -2,7 +2,7 @@ Package: weyl
 Type: Package
 Title: The First Weyl Algebra
 Version: 0.0-1
-Depends: spray (>= 1.0-17)
+Depends: spray (>= 1.0-17), methods
 Authors@R: person(given=c("Robin", "K. S."), family="Hankin", role = c("aut","cre"), email="hankin.robin@gmail.com", comment = c(ORCID = "0000-0001-5982-0415"))
 Maintainer: Robin K. S. Hankin <hankin.robin@gmail.com>
 Description: A suite of routines for Weyl algebras, using the
@@ -10,7 +10,7 @@ Description: A suite of routines for Weyl algebras, using the
 License: GPL (>= 2)
 Suggests: knitr,rmarkdown,testthat
 VignetteBuilder: knitr
-Imports: Rcpp (>= 0.12.5),mathjaxr,disordR (>= 0.0-8), magrittr, methods
+Imports: mathjaxr, disordR (>= 0.0-8)
 URL: https://github.com/RobinHankin/weyl
 BugReports: https://github.com/RobinHankin/weyl/issues
 RdMacros: mathjaxr
