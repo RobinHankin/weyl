@@ -2,15 +2,16 @@
 \alias{derivation}
 \alias{as.der}
 \title{Derivations}
-\description{
+\description{\loadmathjax
 
 A \dfn{derivation} \mjseqn{D} of an algebra \mjeqn{A} is a linear
-operator that satisfies \mjeqn{D(d_1d_2)=d_1D(d_2) +
-D(d_1)d_2}{omitted}, for every \mjeqn{d_1,d_2\in A}{omitted}.  If a
-derivation is of the form \mjeqn{D(d) = [d,f] = df-fd}{omitted} for some
-fixed \mjeqn{f\in A}, we say that \mjseqn{D} is an \dfn{inner}
-derivation.
+operator that satisfies \mjeqn{D(d_1d_2)=d_1D(d_2)+D(d_1)d_2}{omitted},
+for every \mjeqn{d_1,d_2\in A}{omitted}.  If a derivation is of the form
+\mjeqn{D(d)=[d,f]=df-fd}{omitted} for some fixed \mjeqn{f\in A}, we say
+that \mjseqn{D} is an \dfn{inner} derivation.
 
+
+  
 Function \code{as.der()} returns a derivation with
 \code{as.der(f)(g)=fg-gf}.
 
