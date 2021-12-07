@@ -1,0 +1,6 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^README\.Rmd
+^inst/weyl_stickermaker.R$
+^inst/weyl_writing.png$
+
