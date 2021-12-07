@@ -20,9 +20,14 @@ setOldClass("weyl")
 
 `coeffs<-` <- function(S,value){UseMethod("coeffs<-")}
 `coeffs<-.weyl` <- function(S,value){
-    class(S) <- setdiff(class(S),"weyl")
-    coeffs(S) <- value
-    return(weyl(S))
+    jj <- coeffs(S)
+    if(is.disord(value)){
+        stopifnot(consistent(coeffs(S),value))
+        jj <- value
+    } else {
+        jj[] <- value  # the meat
+    }
+    return(weyl(spray(index(S),elements(jj))))
 }
 
 `constant` <- function(x,drop=TRUE){UseMethod("constant")}
@@ -64,3 +69,5 @@ setMethod("drop","weyl", function(x){
 
 `deg` <- function(S){max(rowSums(index(S)))} # following Coutinho
 `zero` <- function(d){weyl(spray(matrix(0,0,2*d),numeric(0)))}
+
+`as.der` <- function(S){function(x){S*x-x*S}}
