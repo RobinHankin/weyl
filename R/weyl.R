@@ -13,6 +13,18 @@ setOldClass("weyl")
 }
 
 `is.weyl` <- function(M){inherits(M,"weyl")}
+`as.weyl` <- function(val,d){
+    if(is.weyl(val) | is.spray(val)){
+        out <- val
+    } else if(is.numeric(val)){
+        out <- spray(matrix(0,1,d*2),val)
+    } else {
+        stop("not recognised")
+    }
+    return(weyl(out))
+}
+    
+
 
 `rweyl` <- function(n = 3, vals = seq_len(n), dim = 3, powers = 0:2){
     weyl(rspray(n = n, vals = vals, arity = dim*2, powers = powers))
