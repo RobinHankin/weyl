@@ -1,9 +1,3 @@
-`weyl` <- function(M){
-    stopifnot(is.spray(M))
-    class(M) <- c("weyl","spray")
-    return(M)
-}
-
 `weyl_prod_helper1` <- function(a,b,c,d){
     if(c==0){return(spray(cbind(a,b+d)))}
     if(b==0){return(spray(cbind(a+c,d)))}
