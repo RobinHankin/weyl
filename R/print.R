@@ -1,23 +1,20 @@
 `print.weyl` <- function(x,...){
     cat("A member of the Weyl algebra:\n")
-    jj <- getOption("weylvars")   # typically c("x","y","z")
-    if(!is.null(jj)){ 
-        options("sprayvars" = c(jj,paste("d",jj,sep="")))
-    } else {  # weylvars is NULL -> unset
-        n <- arity(x)/2
+    wv <- getOption("weylvars")   # typically c("x","y","z")
+    n <- dim(x)
+    if(is.null(wv)){ 
         if(n <= 3){
-            jj <- letters[seq(from=24,len=n)]        
-            jj <- c(jj,paste("d",jj,sep=""))
+            wv <- letters[seq(from=24,len=n)]
         } else {
-            jj <- as.character(seq(from=1,len=n))
-            jj <- c(paste("x",jj,sep=""),paste("d",jj,sep=""))
+            wv <- as.character(seq(from=1,len=n))
         }
-        options("sprayvars" = jj)
     }
     class(x) <- setdiff(class(x),"weyl")
     if(isTRUE(getOption("polyform",default=FALSE))){
+        options("sprayvars" = c(wv,paste("d",wv,sep="")))
         out <- print_spray_polyform(x)
     } else {
+        options("sprayvars" = c(paste(" ",wv,sep=""),paste("d",wv,sep="")))
         out <- print_spray_matrixform(x)
     }
     return(weyl(out))

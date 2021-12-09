@@ -20,13 +20,20 @@ matrix form or polynomial form: as in the \pkg{spray} package, this
 option governs dispatch to either \code{print_spray_polyform()} or
 \code{print_spray_matrixform()}.
 
-Option \code{weylvars} controls the variable names by changing
+Option \code{weylvars} controls the variable names by changing the
 \code{sprayvars} option which is used in the \pkg{spray} package.  If
-\code{weylvars} is set to \code{c("a","b","c")}, the generators are
-named \code{c("da","db","dc","a","b","c")}.  I am not entirely happy
-with this aspect of the package.  Note that, as for the \pkg{spray}
-package, this option has no algebraic significance: it only affects the
-print method.
+\code{NULL} (the default), then sensible values are used: either
+\code{[xyz]} if the dimension is three or less, or integers.
+
+If the user sets \code{weylvars}, the print method tries to do the Right
+Thing (tm).  If set to \code{c("a","b","c")}, for example, the
+generators are named \code{c(" a"," b"," c","da","db","dc")}.  No
+checking is performed and if the length is not equal to the dimension,
+undesirable behaviour may occur.
+
+Note that, as for the \pkg{spray} package, this option has no algebraic
+significance: it only affects the print method.
+
 }
 
 \value{Returns a \code{weyl} object.}
