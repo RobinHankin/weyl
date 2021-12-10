@@ -1,0 +1,42 @@
+test_that("Test suite aaa.R",{
+    expect_silent(as.weyl(10,4))
+    expect_error(as.weyl(10))
+    expect_error(as.weyl("i"))
+    expect_true(is.weyl(as.weyl(weyl(spray(matrix(1:20,5,4))))))
+
+
+    a <- weyl(spray(diag(1:6),1:6))
+    coeffs(a) <- 1
+
+    ## next line reveals a bug in the package
+    expect_error(coeffs(a) <- disordR::disord(c(1,2,3,4,6,5)))
+
+    expect_true(a == weyl(spray(diag(1:6))))
+    expect_error(coeffs(a) <- 1:2)
+    expect_error(coeffs(a) <- 1:6)
+    expect_true(constant(a) == 0)
+    
+    constant(a) <- 19
+    expect_true(constant(a) == 19)
+    expect_true(constant(constant(a,drop=FALSE),drop=TRUE) == 19)
+
+    expect_true(constant(id(8)) == 1)
+    
+
+    expect_true(constant(as.id(rweyl())) == 1)
+    expect_true(is.id(as.id(rweyl())))
+
+    expect_true(dim(rweyl(d=9)) == 9)
+    expect_true(deg(weyl(spray(diag(1:8)))) == 8)
+ 
+    expect_true(is.zero(zero(9)))
+
+
+    expect_true(drop(zero(9)) == 0)
+    expect_true(drop(as.weyl(7,4)) == 7)
+
+    a <- weyl(spray(diag(1:8),1:8))
+    expect_true(a == drop(a))
+   
+})
+
