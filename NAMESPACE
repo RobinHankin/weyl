@@ -6,6 +6,7 @@ import("mathjaxr")
 import("methods")
 
 importFrom(disordR,disord)
+importFrom(disordR,hash)
 importFrom(disordR,hashcal)
 importFrom(disordR,elements)
 importFrom(disordR,is.disord)
