@@ -13,5 +13,3 @@ test_that("Test suite aac.R",{  # as.der()
     }
 })
         
-
-

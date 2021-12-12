@@ -1,6 +1,7 @@
 \name{Ops}
 \alias{Ops}
 \alias{Ops.weyl}
+\alias{weyl_prod}
 \alias{weyl_prod_helper1}
 \alias{weyl_prod_helper2}
 \alias{weyl_prod_helper3}
@@ -71,6 +72,9 @@ vignette provides further details, motivation, and examples.
 }
 \value{Generally, return a weyl object}
 \author{Robin K. S. Hankin}
+
+\note{Function \code{weyl_prod_univariate_nrow()} is present for
+  completeness, it is not used in the package}
 \examples{
 x <- rweyl(n=2,d=2)
 y <- rweyl(n=2,d=2)

@@ -31,11 +31,26 @@ checker1 <- function(A){
   expect_error(A&A)
   expect_true(A*A == A^2)
 
-
+  expect_true(A^0 ==     1)
   expect_true(A^1 ==     A)
   expect_true(A^2 ==   A*A)
   expect_true(A^3 == A*A*A)
+  
+  expect_error(A^-1)
 
+
+  expect_output(print(A))
+  options("polyform" = FALSE)
+  expect_output(print(A))
+  options("polyform" = TRUE)
+  expect_output(print(A))
+
+  options("weylvars" = letters[seq_len(dim(A))])
+  options("polyform" = FALSE)
+  expect_output(print(A))
+  options("polyform" = TRUE)
+  expect_output(print(A))
+    
   
 }   # checker1() closes
   
