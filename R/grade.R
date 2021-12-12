@@ -13,7 +13,7 @@
     if(any(wanted)){
         out <- weyl(spray(index(C)[wanted,],elements(coeffs(C))[wanted]))
     } else {
-        out <- weyl(spray(matrix(0,0,dim(C)),0))
+        out <- weyl(spray(matrix(0,0,2*dim(C)),0))
     }
     if(drop){out <- drop(out)}
     return(out)
