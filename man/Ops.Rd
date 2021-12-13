@@ -11,6 +11,7 @@
 \alias{weyl_prod_multivariate_onerow_allcolumns}
 \alias{weyl_prod_multivariate_nrow_allcolumns}
 \alias{weyl_power_scalar}
+\alias{prodfunc}
 \title{Arithmetic Ops Group Methods for the Weyl algebra}
 \description{\loadmathjax
   Allows arithmetic operators to be used for spray calculations, 
