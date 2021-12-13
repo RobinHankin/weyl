@@ -4,3 +4,9 @@
 ^inst/weyl_stickermaker.R$
 ^inst/weyl_writing.png$
 
+
+^vignettes/.Rhistory$
+^vignettes/weyl.html$
+^vignettes/weyl_cache/
+
+
