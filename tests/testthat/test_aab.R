@@ -4,6 +4,10 @@ test_that("Test suite aaa.R",{
     expect_error(as.weyl("i"))
     expect_true(is.weyl(as.weyl(weyl(spray(matrix(1:20,5,4))))))
 
+    expect_error(weyl(matrix(1:10,2,5)))
+    expect_silent(weyl(matrix(1:8,2,4)))
+    expect_silent(as.weyl(matrix(1:8,2,4)))
+    expect_silent(as.weyl(matrix(1:8,2,4),1:2))
 
     a <- weyl(spray(diag(1:6),1:6))
     coeffs(a) <- 1

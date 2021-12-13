@@ -1,4 +1,5 @@
 `weyl` <- function(M){
+    if(is.matrix(M)){M <- spray(M)}
     stopifnot(is.ok.weyl(M))
     class(M) <- c("weyl","spray")
     return(M)
@@ -16,13 +17,15 @@ setOldClass("weyl")
 `as.weyl` <- function(val,d){
     if(is.weyl(val) | is.spray(val)){
         out <- val
+    } else if(is.matrix(val)){
+        out <- spray(val,d)
+    } else if(is.numeric(val)){
+        return(val*idweyl(d))
     } else {
         stop("not recognised")
     }
     return(weyl(out))
 }
-    
-
 
 `rweyl` <- function(n = 3, vals = seq_len(n), dim = 3, powers = 0:2){
     weyl(rspray(n = n, vals = vals, arity = dim*2, powers = powers))
@@ -83,4 +86,3 @@ setMethod("drop","weyl", function(x){
 
 `as.der` <- function(S){function(x){S*x-x*S}}
 
-`as.one.weyl` <- function(S){weyl(spray(t(rep(0,arity(S)))))}

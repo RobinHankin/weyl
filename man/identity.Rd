@@ -16,7 +16,6 @@ The identity operator maps any function to itself.
 \usage{
 idweyl(d)
 \method{as.id}{weyl}(S)
-as.one.weyl(S)
 is.id(S)
 }
 \arguments{
