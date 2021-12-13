@@ -16,8 +16,6 @@ setOldClass("weyl")
 `as.weyl` <- function(val,d){
     if(is.weyl(val) | is.spray(val)){
         out <- val
-    } else if(is.numeric(val)){
-        out <- spray(matrix(0,1,d*2),val)
     } else {
         stop("not recognised")
     }

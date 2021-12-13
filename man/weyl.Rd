@@ -17,9 +17,10 @@ is.ok.weyl(M)
 }
 \details{
 Function \code{weyl()} is the formal creator method; \code{is.weyl()}
-tests for weyl objects and \code{is.ok.weyl()} checks for well-formed a 
-spray.  Function \code{as.weyl()} tries (but not very hard) to infer
+tests for weyl objects and \code{is.ok.weyl()} checks for well-formed
+sprays.  Function \code{as.weyl()} tries (but not very hard) to infer
 what the user intended and return the right thing.
+
 }
 \value{Return a weyl or a Boolean}
 \author{Robin K. S. Hankin}
