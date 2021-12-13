@@ -20,7 +20,7 @@ test_that("Test suite aaa.R",{
     expect_true(constant(a) == 19)
     expect_true(constant(constant(a,drop=FALSE),drop=TRUE) == 19)
 
-    expect_true(constant(id(8)) == 1)
+    expect_true(constant(idweyl(8)) == 1)
     
 
     expect_true(constant(as.id(rweyl())) == 1)

@@ -61,8 +61,8 @@ setOldClass("weyl")
     return(weyl(x))
 }
 
-`id` <- function(d){weyl(spray(matrix(0,1,d*2),1))}
-`as.id` <- function(S){id(dim(S))}
+`idweyl` <- function(d){weyl(spray(matrix(0,1,d*2),1))}
+`as.id.weyl` <- function(S){idweyl(dim(S))}
 `is.id` <- function(S){S == as.id(S)}
 
 setGeneric("dim")
@@ -84,3 +84,5 @@ setMethod("drop","weyl", function(x){
 `zero` <- function(d){weyl(spray(matrix(0,0,2*d),numeric(0)))}
 
 `as.der` <- function(S){function(x){S*x-x*S}}
+
+`as.one.weyl` <- function(S){weyl(spray(t(rep(0,arity(S)))))}

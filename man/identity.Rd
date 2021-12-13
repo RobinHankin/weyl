@@ -1,8 +1,12 @@
 \name{identity}
 \alias{identity}
 \alias{id}
+\alias{idweyl}
 \alias{as.id}
 \alias{is.id}
+\alias{as.id.weyl}
+\alias{is.id.weyl}
+\alias{as.one.weyl}
 \alias{is.identity}
 \alias{as.identity}
 \title{The identity operator}
@@ -10,8 +14,9 @@
 The identity operator maps any function to itself.
 }
 \usage{
-id(d)
-as.id(S)
+idweyl(d)
+\method{as.id}{weyl}(S)
+as.one.weyl(S)
 is.id(S)
 }
 \arguments{
@@ -19,9 +24,13 @@ is.id(S)
     spray arity)}
   \item{S}{A weyl object}
 }
+\note{The identity function cannot be called \dQuote{\code{id()}}
+  because then \proglang{R} would not know whether to create a
+  \code{spray} or a \code{weyl} object.}
+
 \examples{
 
-id(7)
+idweyl(7)
 
 a <- rweyl(d=5)
 is.id(a)

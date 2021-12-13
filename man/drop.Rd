@@ -14,7 +14,7 @@
 a <- rweyl() + 67
 drop(a)
 
-drop(id(9))
+drop(idweyl(9))
 
 drop(constant(a,drop=FALSE))
 }
