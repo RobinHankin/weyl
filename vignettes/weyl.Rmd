@@ -247,10 +247,19 @@ d^5*e == e*(1+d)^5
 
 which verifies that indeed $\partial^5e=e(1+\partial)^5$.
 We can calculate more complicated expressions too.  Suppose we want to
-evaluate $(1+e^2\partial^4)(e^3\partial^3)$:
+evaluate $(1+e^2\partial)(1-5e^3\partial^3)$:
 
 ```{r}
-(1+weyl(spray(cbind(2,4)))) * weyl(spray(cbind(3,3)))
+o1 <- weyl(spray(cbind(2,1)))
+o2 <- weyl(spray(cbind(3,3)))
+(1+o1)*(1-5*o2)
+```
+
+And of course we can display the result in symbolic form:
+
+```{r}
+options(polyform = TRUE)
+(1+o1)*(1-5*o2)
 ```
 
 
