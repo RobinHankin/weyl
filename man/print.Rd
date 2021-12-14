@@ -31,7 +31,7 @@ generators are named \code{c(" a"," b"," c","da","db","dc")}.  If the
 algebra is univariate, the names will be something like \code{d} and
 \code{x}.  No checking is performed and if the length is not equal to
 the dimension, undesirable behaviour may occur.  For the love of God, do
-not use a variable named \dquote{d}.
+not use a variable named \dQuote{d}.
 
 Note that, as for the \pkg{spray} package, this option has no algebraic
 significance: it only affects the print method.
