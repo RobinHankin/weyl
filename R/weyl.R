@@ -27,8 +27,8 @@ setOldClass("weyl")
     return(weyl(out))
 }
 
-`rweyl` <- function(n = 3, vals = seq_len(n), dim = 3, powers = 0:2){
-    weyl(rspray(n = n, vals = vals, arity = dim*2, powers = powers))
+`rweyl` <- function(nterms = 3, vals = seq_len(nterms), dim = 3, powers = 0:2){
+    weyl(rspray(n = nterms, vals = vals, arity = dim*2, powers = powers))
 }
 
 `coeffs<-` <- function(S,value){UseMethod("coeffs<-")}
