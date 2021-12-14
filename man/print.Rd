@@ -27,9 +27,11 @@ Option \code{weylvars} controls the variable names by changing the
 
 If the user sets \code{weylvars}, the print method tries to do the Right
 Thing (tm).  If set to \code{c("a","b","c")}, for example, the
-generators are named \code{c(" a"," b"," c","da","db","dc")}.  No
-checking is performed and if the length is not equal to the dimension,
-undesirable behaviour may occur.
+generators are named \code{c(" a"," b"," c","da","db","dc")}.  If the
+algebra is univariate, the names will be something like \code{d} and
+\code{x}.  No checking is performed and if the length is not equal to
+the dimension, undesirable behaviour may occur.  For the love of God, do
+not use a variable named \dquote{d}.
 
 Note that, as for the \pkg{spray} package, this option has no algebraic
 significance: it only affects the print method.

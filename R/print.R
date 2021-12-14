@@ -11,10 +11,18 @@
     }
     class(x) <- setdiff(class(x),"weyl")
     if(isTRUE(getOption("polyform",default=FALSE))){
-        options("sprayvars" = c(wv,paste("d",wv,sep="")))
+        if(n==1){
+            options("sprayvars" = c(wv,"d"))
+        } else {
+            options("sprayvars" = c(wv,paste("d",wv,sep="")))
+        }
         out <- print_spray_polyform(x)
     } else {
-        options("sprayvars" = c(paste(" ",wv,sep=""),paste("d",wv,sep="")))
+        if(n==1){
+            options("sprayvars" = c(wv,"d"))
+        } else {
+            options("sprayvars" = c(paste(" ",wv,sep=""),paste("d",wv,sep="")))
+        }
         out <- print_spray_matrixform(x)
     }
     return(weyl(out))
