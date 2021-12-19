@@ -88,7 +88,8 @@ options(polyform=TRUE)
 
 ### Comparison with mathematica
 
-Mathematica can deal with operators and we may compare the two systems:
+Mathematica can deal with operators and we may compare the two
+systems' results for $\partial^2x\partial x^2$:
 
 `In[1] := D[D[x*D[x^2*f[x],x],x],x] // Expand`
 
