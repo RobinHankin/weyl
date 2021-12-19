@@ -1,0 +1,63 @@
+---
+title: "Symbolic Weyl algebra in R with the `weyl` package: objects `x` and `d`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+set.seed(0)
+knitr::opts_chunk$set(echo = TRUE)
+library("weyl")
+options("digits" = 5)
+```
+
+<p style="text-align: right;">
+![](`r system.file("help/figures/weyl.png", package = "weyl")`){width=10%}
+</p>
+
+
+
+This minimal document creates R objects `x` and `d` (available in the
+`weyl` package) and gives a couple of use-cases and slick examples.
+Here, R object `x` corresponds to the map $f\mapsto xf$ and `d`
+corresponds to $\partial$, that is the map $f\mapsto f'=\partial
+f/\partial x$.  Operators are written in prefix notation; for example,
+$\partial^2x$ is the map
+$f\mapsto\partial^2xf=(xf)''=(xf'+f)'=xf''+f'+f' =x\partial^2f
++2\partial f$.  Symbolically we would write this as
+$\partial^2x=x\partial^2+2\partial$.  Package idiom for this would be:
+
+```{r,label=create_x_and_d}
+x <- weyl(cbind(1,0))
+d <- weyl(cbind(0,1))
+options(polyform = TRUE)
+x
+d
+```
+
+First we verify the fundamental relation $\partial x-x\partial=1$:
+
+```{r,label=verifydxmxd}
+d*x-x*d
+```
+
+Now we check the symbolic example given above:
+```{r}
+d^2*x
+```
+
+More complicated expressions can be used.  Below I evaluate
+$(1+x)(1-\partial)(1+x+x\partial)^3$:
+
+```{r}
+(1+x)*(1-d)*(1+x+x*d)^3
+```
+
+
+### Package dataset
+
+Following lines create file `x_and_d.rda`, residing in the `data/`
+directory of the package.
+
+```{r,label=save_x_and_d}
+save(x,d,file="x_and_d.rda")
+```
