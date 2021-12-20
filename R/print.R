@@ -14,7 +14,7 @@
         if(n==1){
             options("sprayvars" = c(wv,"d"))
         } else {
-            options("sprayvars" = c(wv,paste("d",wv,sep="")))
+            options("sprayvars" = c(paste("x",wv,sep=""),paste("d",wv,sep="")))
         }
         out <- print_spray_polyform(x)
     } else {
