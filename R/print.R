@@ -13,6 +13,8 @@
     if(isTRUE(getOption("polyform",default=FALSE))){
         if(n==1){
             options("sprayvars" = c(wv,"d"))
+        } else if(n<=3){
+            options("sprayvars" = c(wv,paste("d",wv,sep="")))
         } else {
             options("sprayvars" = c(paste("x",wv,sep=""),paste("d",wv,sep="")))
         }
