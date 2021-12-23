@@ -54,11 +54,12 @@ follow Cock and use the fact that
 
 \[
 (\partial^i x^j)(\partial^lx^m)=
-\sum_{r=0}^j{j\choose r}{l\choose r}\partial^{i+l-r}x^{j+m-r}\]
+\sum_{r=0}^j{j\choose r}{l\choose r}\partial^{i+l-r}x^{j+m-r}.\]
 
 All this is done in the package.  Consider $d_1=\partial x +
-2\partial^3$ and $d_2=3+7\partial -5x^2\partial^2$.  Observing
-that $d_1$ is in standard form, package idiom would be:
+2\partial^3$ and $d_2=3+7\partial -5x^2\partial^2$.  Observing that
+$d_1$ and $d_2$ are in standard form, package idiom to create these
+operators would be:
 
 ```{r loadlib,echo=TRUE,print=FALSE,results="hide",message=FALSE}
 library(weyl)
