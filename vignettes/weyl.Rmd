@@ -50,7 +50,7 @@ and
 
 We can apply these rules recursively to find standard form for
 products $(\partial^i x^j)(\partial^l x^m)$.  Alternatively we may
-follow Cock and use the fact that
+follow Wolf and use the fact that
 
 \[
 (\partial^i x^j)(\partial^lx^m)=
@@ -195,7 +195,7 @@ This defaults to `weyl_prod_helper3()`:
 weyl_prod_helper3
 ```
 
-Function `weyl_prod_helper3()` follows Cock.  This gives the
+Function `weyl_prod_helper3()` follows Wolf.  This gives the
 univariate concatenation product $(\partial^a x^b)(\partial^c x^d)$ in
 terms of standard generators:
 
@@ -299,3 +299,7 @@ options(polyform = NULL) # restore default Weyl product
 * S. C. Coutinho 1997.  _The many avatars of a simple algebra_.  The
    American Mathematical Monthly, 104(7):593-604.  DOI
    [https://doi.org/10.1080/00029890.1997.11990687](https://doi.org/10.1080/00029890.1997.11990687).
+
+* K. B. Wolf 1975. _The Heisenberg-Weyl ring in quantum mechanics_.
+  In _Group theory and its applications_, Volume III, Academic Press,
+  Inc
