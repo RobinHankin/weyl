@@ -1,0 +1,41 @@
+\name{dot-class}
+\docType{class}
+\alias{dot}
+\alias{.}
+\alias{dot-class}
+\alias{extract}
+\alias{commutator}
+\alias{jacobi}
+\alias{dot_error}
+\alias{[.dot}
+\alias{[,dot-method}
+\alias{[,dot,ANY,ANY-method}
+\alias{[,dot,ANY,missing-method}
+\alias{[,dot,missing,ANY-method}
+\alias{[,dot,missing,missing-method}
+\alias{[,dot,matrix,matrix-method}
+\title{Class \dQuote{dot}}
+\description{
+
+  The dot object is defined in the \pkg{freealg} package, and imported
+  here, so that idiom like \code{.[x,y]} returns the commutator, that
+  is, \code{xy-yx}.
+}
+\arguments{
+  \item{x}{Object of any class}
+  \item{i,j}{elements to commute}
+  \item{...}{Further arguments to \code{dot_error()}, currently ignored}
+}
+\value{
+  Always returns an object of the same class as \code{xy}.
+}
+\author{Robin K. S. Hankin}
+\examples{
+x <- rweyl(n=1,d=2)
+y <- rweyl(n=1,d=2)
+z <- rweyl(n=1,d=2)
+
+.[x,.[y,z]] + .[y,.[z,x]] + .[z,.[x,y]]  # Jacobi identity
+
+
+}

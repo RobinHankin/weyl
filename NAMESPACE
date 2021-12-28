@@ -13,6 +13,10 @@ importFrom(disordR,is.disord)
 importFrom(disordR,consistent)
 importFrom("disordR","%in%")  # needed for grades<-()
 
+importClassesFrom("freealg", "dot")
+importMethodsFrom("freealg", "[")
+importMethodsFrom("freealg", "dot_error")
+
 S3method(print,weyl)
 S3method(constant,weyl)
 S3method("constant<-",weyl)

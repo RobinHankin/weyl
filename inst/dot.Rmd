@@ -1,0 +1,32 @@
+---
+title: "The dot: commutators and the Jacobi identity in R"
+output: bookdown::html_document2
+---
+
+```{r setup, include=FALSE}
+set.seed(0)
+knitr::opts_chunk$set(echo = TRUE)
+library("weyl")
+```
+
+<p style="text-align: right;">
+![](`r system.file("help/figures/freealg.png", package = "freealg")`){width=10%}
+</p>
+
+This short document introduces the dot object and shows how it can be
+used to work with commutators.
+
+```{r}
+options(warn=0)
+`.` <- new("dot")
+`.`
+```
+
+### Package dataset {-}
+
+Following lines create `dot.rda`, residing in the `data/` directory
+of the package.
+
+```{r,label=savethedotobject}
+save(`.`,file="dot.rda")
+```
