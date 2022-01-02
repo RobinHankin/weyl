@@ -1,0 +1,55 @@
+---
+title: "Stirling numbers crop up in the Weyl algebra"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+set.seed(0)
+knitr::opts_chunk$set(echo = TRUE)
+library("weyl")
+library("multicool")
+options("digits" = 5)
+```
+
+<p style="text-align: right;">
+![](`r system.file("help/figures/weyl.png", package = "weyl")`){width=10%}
+</p>
+
+
+This short document shows how Stirling numbers appear when working
+with the Weyl algebra.  Stirling numbers of the second kind, written
+$S(n,k)$, count the number of equivalence relations on a set of $n$
+elements having precisely $k$ equivalence classes.
+
+Using Weyl algebra terminology, we consider powers of $x\partial$,
+that is $(x\partial)^i$ for $i=1,2,\ldots$.  Taking $i=2$ as an
+example, we have $(x\partial)^2=(x\partial)(x\partial)=x(\partial
+x)\partial=x(x\partial+1)\partial=x^2\partial^2+x\partial$.  It can be
+proved (but the margins are too small) that
+$(x\partial)^n=\sum_{i=1}^nS(n,k)\partial^kx^k$.  Taking $n=7$ as an
+example we have
+
+```{r,label=xd7}
+(xd7 <- (x*d)^7)
+options(polyform = TRUE)
+xd7
+```
+
+and it is possible to decompose this expression as follows:
+
+```{r, label=decomposexd7}
+f <- function(w){
+   jj <- numeric(nterms(w)) 
+   jj[index(w)] <- coeffs(w)
+   jj
+}
+f(xd7)
+```
+
+We can compare this with results from the `multicool` package:
+
+```{r, label=usemulticool}
+ multicool::Stirling2(7,1:7)
+```
+
+giving identical results.
