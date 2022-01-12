@@ -13,10 +13,6 @@ The DESCRIPTION file:
 \packageDESCRIPTION{weyl}
 \packageIndices{weyl}
 
-The Weyl algebra
-
-\mjeqn{\frac{1}{1+2}}{1/3}
-
 }
 \author{
 \packageAuthor{weyl}
