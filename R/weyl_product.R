@@ -137,7 +137,6 @@
   stopifnot(n==round(n))
   if(all(index(S) == c(0,1))){return(weyl(spray(t(c(0,n)),coeffs(S)^n)))}
   if(all(index(S) == c(1,0))){return(weyl(spray(t(c(n,0)),coeffs(S)^n)))}
-  if(S==x){return(weyl(t(c(n,0))))}
   if(n<0){
       stop("use ooom() for negative powers")
   } else if(n==0){
