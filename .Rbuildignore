@@ -4,6 +4,7 @@
 ^inst/weyl_stickermaker.R$
 ^inst/weyl_writing.png$
 ^inst/symb.R$
+^inst/stirling.Rmd$
 
 
 ^vignettes/.Rhistory$
