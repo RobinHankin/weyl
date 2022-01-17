@@ -39,6 +39,7 @@ setOldClass("weyl")
         if((!identical(hash(jj),hash(value))) & (length(value)>1)){stop("length > 1")}
         jj <- value
     } else {
+        stopifnot(length(value)==1)
         jj[] <- value  # the meat
     }
     return(weyl(spray(index(S),elements(jj))))
