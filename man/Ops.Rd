@@ -60,7 +60,6 @@ subject to \mjeqn{x\partial-\partial x=1}{omitted}; and
 \mjeqn{\left\lbrace
 x_1,x_2,\ldots,x_n,\partial_{x_1},\partial_{x_2},\ldots,\partial_{x_n}\right\rbrace}{omitted}.
 
-
 The product is somewhat user-customisable via option \code{prodfunc},
 which affects function \code{weyl_prod_univariate_onerow()}.  Currently
 the package offers three examples: \code{weyl_prod_helper1()},
