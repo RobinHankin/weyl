@@ -76,8 +76,8 @@ vignette provides further details, motivation, and examples.
 \note{Function \code{weyl_prod_univariate_nrow()} is present for
   completeness, it is not used in the package}
 \examples{
-x <- rweyl(n=2,d=2)
-y <- rweyl(n=2,d=2)
+x <- rweyl(n=1,d=2)
+y <- rweyl(n=1,d=2)
 z <- rweyl(n=2,d=2)
 
 
