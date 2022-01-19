@@ -22,9 +22,10 @@
     \mathrm{deg}(d_2)-2}{omitted}
 }
 }
-
 \usage{deg(S)}
 \arguments{\item{S}{Object of class \code{weyl}}}
+\value{Nonnegative integer (or \mjeqn{-\infty}{-Inf} for the zero Weyl
+  object)}
 \author{Robin K. S. Hankin}
 \note{The degree of the zero object is conventionally
   \mjeqn{-\infty}{-infinity}.

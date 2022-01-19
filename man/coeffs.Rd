@@ -36,6 +36,8 @@ The replacement method is package-specific; use \code{coeffs(S)
 <-value}.
 
 }
+\value{Extraction methods return a \code{disord} object (possibly
+  \code{drop}ped); replacement methods return a \code{weyl} object.}
 \author{Robin K. S. Hankin}
 \examples{
 

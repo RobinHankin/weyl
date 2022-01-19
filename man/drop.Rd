@@ -7,6 +7,8 @@
 \arguments{\item{x}{Weyl object}}
 \details{If its argument is a constant weyl object, coerce to numeric.}
 \author{Robin K. S. Hankin}
+\value{Returns either a length-one numeric vector or its argument, a
+  weyl object}
 \note{Many functions in the package take \code{drop} as an argument
   which, if \code{TRUE}, means that the function returns a
   \code{drop}ped value.}

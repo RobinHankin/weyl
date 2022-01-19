@@ -9,13 +9,13 @@ The zero operator maps any function to the zero function (which maps
 anything to zero).  To test for being zero, use \code{spray::is.zero()};
 package idiom would be \code{is.zero()}. 
 }
-\usage{
-zero(d)
-}
+\usage{zero(d)}
 \arguments{
   \item{d}{Integer specifying dimensionality of the weyl object (twice the
     spray arity)}
 }
+\value{A weyl object corresponding to the zero operator (or a Boolean
+  for \code{is.zero()})}
 \examples{
 a <- rweyl(d=5)
 is.zero(a)

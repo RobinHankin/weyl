@@ -23,6 +23,7 @@ is.id(S)
     spray arity)}
   \item{S}{A weyl object}
 }
+\value{A weyl object corresponding to the identity operator}
 \note{The identity function cannot be called \dQuote{\code{id()}}
   because then \proglang{R} would not know whether to create a
   \code{spray} or a \code{weyl} object.}

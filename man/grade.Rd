@@ -41,6 +41,7 @@ elements of grade \code{g}, where \code{g \%in\% n}.
 The zero grade term, \code{grade(C,0)}, is given more naturally by
 \code{constant(C)}.
 }
+\value{Integer vector or weyl object}
 \author{Robin K. S. Hankin}
 \examples{
 
