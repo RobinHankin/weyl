@@ -17,7 +17,7 @@ Function \code{as.der()} returns a derivation with
 }
 \usage{as.der(S)}
 \arguments{\item{S}{Weyl object}}
-\value{Returns a derivation}
+\value{Returns a function, a derivation}
 \author{Robin K. S. Hankin}
 \examples{
 
