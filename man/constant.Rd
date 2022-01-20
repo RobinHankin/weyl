@@ -1,5 +1,6 @@
 \name{constant}
 \alias{constant}
+\alias{const}
 \alias{constant<-}
 \alias{constant.weyl}
 \alias{constant<-.weyl}
