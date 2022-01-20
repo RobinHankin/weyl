@@ -35,7 +35,7 @@ It can be shown that any element of the Weyl algebra can be expressed
 in the standard form
 
 \[
-\sum a_i \partial^{p_i}x^{q_i}\]
+\sum_i a_i \partial^{p_i}x^{q_i}\]
 
 for real $a_i$ and nonnegative integers $p_i,q_i$.  Converting a
 general word to standard form is not straightforward but we have
