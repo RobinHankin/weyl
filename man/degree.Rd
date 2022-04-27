@@ -32,6 +32,9 @@
 }
 \examples{
 
+(a <- rweyl())
+deg(a)
+
 d1 <- rweyl(n=2)
 d2 <- rweyl(n=2)
 

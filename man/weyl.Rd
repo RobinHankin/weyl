@@ -26,7 +26,8 @@ what the user intended and return the right thing.
 \author{Robin K. S. Hankin}
 \examples{
 
-weyl(spray(matrix(1:36,6,6),1:6))
+(W <- spray(matrix(1:36,6,6),1:6))
+weyl(W)
 
 as.weyl(15,d=3)
 }

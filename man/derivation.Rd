@@ -21,8 +21,8 @@ Function \code{as.der()} returns a derivation with
 \author{Robin K. S. Hankin}
 \examples{
 
-o <- rweyl(n=2,d=2)
-f <- as.der(o)
+(o <- rweyl(n=2,d=2))
+(f <- as.der(o))
 
 d1 <-rweyl(n=1,d=2)
 d2 <-rweyl(n=2,d=2)

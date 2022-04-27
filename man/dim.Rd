@@ -19,7 +19,8 @@
 \author{Robin K. S. Hankin}
 \examples{
 
-dim(rweyl())
+(a <- rweyl())
+dim(a)
 
 }
 
