@@ -41,7 +41,8 @@ The replacement method is package-specific; use \code{coeffs(S)
 \author{Robin K. S. Hankin}
 \examples{
 
-a <- rweyl()
+(a <- rweyl(9))
 coeffs(a)
 coeffs(a)[coeffs(a)<3] <- 100
+a
 }

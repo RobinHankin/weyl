@@ -17,7 +17,7 @@ package idiom would be \code{is.zero()}.
 \value{A weyl object corresponding to the zero operator (or a Boolean
   for \code{is.zero()})}
 \examples{
-a <- rweyl(d=5)
+(a <- rweyl(d=5))
 is.zero(a)
 is.zero(a-a)
 is.zero(a*0)
