@@ -22,7 +22,10 @@
 \usage{data(x_and_d)}
 \author{Robin K. S. Hankin}
 \examples{
-d*x-x*d
+d
+x
+d*x-x*d   # dx-xd=1
+
 
 (1-d*x*d)*(x^2-d^3)
 

@@ -33,8 +33,10 @@ is.id(S)
 idweyl(7)
 
 a <- rweyl(d=5)
+a
 is.id(a)
 is.id(1+a-a)
+as.id(a)
 
 a == a*1
 a == a*as.id(a)

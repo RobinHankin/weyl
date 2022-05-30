@@ -50,5 +50,5 @@ a <- rweyl(30)
 grades(a)
 grade(a,1:4)
 grade(a,5:9) <- -99
-
+a
 }
