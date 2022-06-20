@@ -6,7 +6,7 @@
 \title{The grade of a weyl object}
 \description{\loadmathjax
 
-  The \dfn{grade} of a homogenous term of a Weyl algebra is the sum of
+  The \dfn{grade} of a homogeneous term of a Weyl algebra is the sum of
   the powers.  Thus the grade of
   \mjeqn{4xy^2\partial_x^3\partial_y^4}{omitted} is \mjseqn{1+2+3+4=10}.
 
