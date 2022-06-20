@@ -290,7 +290,53 @@ options(polyform = TRUE)
 
 
 ```{r echo=FALSE}
-options(polyform = NULL) # restore default Weyl product
+options(polyform = NULL) # restore default print method
+```
+
+# Note on use of `disordR` package
+
+The coefficients of a `weyl` object, and the rows of its `spray`
+matrix, are stored in an implementation-specific order.  Thus,
+extraction and replacement use the `disordR` package (Hankin 2022).  A
+short example follows in the context of the `weyl` package; a much
+more extensive and detailed discussion is given in the `disordR`
+vignette.  First we create a moderately complicated `weyl` object:
+
+```{r,makearandomweyl}
+options(weylvars = NULL)  # revert to default names
+(W <- weyl(spray(matrix(c(0,1,1,1,1,2,1,0),2,4),2:3))^2)
+```
+
+The coefficients of `W` may be extracted:
+
+```{r,showcoeffsinuse}
+coeffs(W)
+```
+
+The object returned is a `disord` object.  There is no way to extract
+(e.g.) the first coefficient, for the order of the matrix rows is not
+defined.  If we try we will get an error:
+
+
+```{r,showdisorderror,error=TRUE}
+coeffs(W)[1]
+```
+
+However, it is perfectly well defined to ask "give all coefficients
+greater than 6":
+
+```{r,ogreaterthantwo}
+o <- coeffs(W)
+o[o>6]
+```
+
+Extraction works as expected.  Using recent improvements in the
+`disordR` package, we take all coefficients less than 7 and add 100 to
+them:
+
+```{r,showextractionworking}
+coeffs(W)[coeffs(W)<7] <- coeffs(W)[coeffs(W)<7] + 100
+W
 ```
 
 
@@ -303,3 +349,6 @@ options(polyform = NULL) # restore default Weyl product
 * K. B. Wolf 1975. _The Heisenberg-Weyl ring in quantum mechanics_.
   In _Group theory and its applications_, Volume III, Academic Press,
   Inc
+
+* R. K. S. Hankin 2022.  The `weyl` package.
+  [https://CRAN.R-project.org/package=disordR](https://CRAN.R-project.org/package=disordR)
