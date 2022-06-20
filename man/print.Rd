@@ -1,6 +1,7 @@
 \name{print.weyl}
 \alias{print.weyl}
 \alias{print}
+\alias{weylvars}
 \title{Print methods for weyl objects}
 
 \description{
