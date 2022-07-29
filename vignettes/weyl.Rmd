@@ -349,5 +349,5 @@ W
   In _Group theory and its applications_, Volume III, Academic Press,
   Inc
 
-* R. K. S. Hankin 2022.  The `weyl` package.
-  [https://CRAN.R-project.org/package=weyl](https://CRAN.R-project.org/package=weyl)
+* R. K. S. Hankin 2022.  The `disordR` package.
+  [https://CRAN.R-project.org/package=disordR](https://CRAN.R-project.org/package=disordR)
