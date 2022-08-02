@@ -24,8 +24,10 @@
 \examples{
 d
 x
-d*x-x*d   # dx-xd=1
 
+.[d,x]   # dx-xd==1
+
+d^3 * x^4
 
 (1-d*x*d)*(x^2-d^3)
 
