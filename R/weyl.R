@@ -87,3 +87,4 @@ setMethod("drop","weyl", function(x){
 
 `as.der` <- function(S){function(x){S*x-x*S}}
 
+setGeneric("sort")
