@@ -233,6 +233,7 @@ We may verify that the expressions are indeed algebraically identical:
 
 <<verifyassociativity>>=
 x*(y*z) - (x*y)*z
+options(polyform=FALSE)  # revert to default print method
 @
 
 The package can deal with arbitrarily high dimensional Weyl algebras.
@@ -413,15 +414,25 @@ options(polyform = TRUE)
 options(polyform = NULL) # restore default print method
 @
 
-\section{Note on use of {\tt disordR} package}
+\section{Computational implementation and notes on {\tt disordR}
+discipline}
 
-The coefficients of a {\tt weyl} object, and the rows of its {\tt
-spray} matrix, are stored in an implementation-specific order.  Thus,
-extraction and replacement use the {\tt disordR}
-package~\cite{hankin2022_disordR}.  A short example follows in the
-context of the {\tt weyl} package; a much more extensive and detailed
-discussion is given by Hankin~\cite{hankin2022_disordR}.  First we
-create a moderately complicated {\tt weyl} object:
+The package stores {\tt weyl} objects using the {\tt
+spray}~\cite{hankin2022_spray_arxiv} class for sparse arrays.
+Addition is inherited from {\tt spray}; multiplication is specific to
+the {\tt weyl} package.  Thus the coefficients of a {\tt weyl} object,
+and the rows of its index matrix, are stored in an
+implementation-specific order.  Extraction and replacement use {\tt
+disordR} discipline~\cite{hankin2022_disordR_arxiv}.  A short example
+follows in the context of the {\tt weyl} package; much more extensive
+and detailed discussions are given by
+Hankin~\cite{hankin2022_disordR_arxiv,hankin2022_mvp_arxiv}.
+
+
+\subsection{An illustrative session}
+
+Here I show how {\tt disordR} discipline is used in a typical R
+session.  First we create a moderately complicated {\tt weyl} object:
 
 <<makearandomweyl>>=
 options(weylvars = NULL)   # revert to default names
@@ -464,6 +475,15 @@ them:
 coeffs(W)[coeffs(W)<7] <- coeffs(W)[coeffs(W)<7] + 100
 W
 @
+
+\section{Conclusions and further work}
+
+The {\tt weyl} package implements Weyl algebra using real
+coefficients.  However, in quantum mechanics one typically works with
+the operator $p_j$, defined as $-i\partial_j$ (where $i$ is the
+imaginary unit of the complex plane, $i^2=-1$); thus
+$x_jp_j-p_jx_j=-i$.  Further work might include admitting complex
+coefficients to accommodate this parametrization.
 
 \bibliographystyle{apalike}
 \bibliography{weyl_arxiv}
