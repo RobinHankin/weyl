@@ -56,18 +56,14 @@ pdfkeywords={Quantum algebra, Weyl algebra, noncommutative algebra}
 \maketitle
 
 \begin{abstract}
-
 Weyl algebra is a simple noncommutative system used in quantum
-mechanics~\cite{coutinho1997}.  Here I introduce the {\tt weyl}
-package, written in the R computing language~\citep{rcore2022}, which
-furnishes functionality for working with univariate and multivariate
-Weyl algebras.  The package is available on CRAN at
-\url{https://CRAN.R-project.org/package=weyl}.
-
+mechanics.  Here I introduce the {\tt weyl} package, written in the R
+computing language, which furnishes functionality for working with
+univariate and multivariate Weyl algebras.  The package is available
+on CRAN at \url{https://CRAN.R-project.org/package=weyl}.
 \end{abstract}
 
 \SweaveOpts{}
-
 
 \section{Introduction}
 
@@ -78,7 +74,8 @@ Weyl algebras.  The package is available on CRAN at
   \end{center}
 \end{wrapfigure}
 Consider the vector space ${\mathcal A}$ of linear operators on
-univariate functions; ${\mathcal A}$ can be made into an algebra where
+univariate functions; ${\mathcal A}$ can be made into an algebra,
+conventionally called a Weyl algebra~\cite{coutinho1997}, where
 multiplication (denoted by juxtaposition) is defined as operator
 composition.  That is, given operators ${\mathcal O}_1,{\mathcal O}_2$
 we define their product ${\mathcal O}_1{\mathcal O}_2$ by
@@ -114,7 +111,7 @@ and
 
 We can apply these rules recursively to find standard form for
 products $(\partial^i x^j)(\partial^l x^m)$.  Alternatively we may
-follow Wolf and use the fact that
+follow Wolf~\cite{wolf1975} and use the fact that
 
 \[
 (\partial^i x^j)(\partial^lx^m)=
@@ -126,11 +123,15 @@ x\partial^3 x$ can be expressed as $7\partial + 12x\partial^2 +
 
 \subsection{The package in use}
 
-The package includes functionality to automate the above calculations.
-In particular, package idiom represents the generating elements
-$\partial$ and $x$ of the first Weyl algebra as R objects {\tt d} and
-{\tt x} respectively.  These may be manipulated with standard
-arithemetic operations:
+The above operators form part of the {\tt weyl} package, written in
+the R computing language~\citep{rcore2022}, which is available on CRAN
+at
+\url{https://CRAN.R-project.org/package=weyl}~\cite{hankin2022_weyl}.
+The package includes functionality to automate the above calculations
+in an R-centric manner.  In particular, package idiom represents the
+generating elements $\partial$ and $x$ of the first Weyl algebra as R
+objects {\tt d} and {\tt x} respectively.  These may be manipulated
+with standard arithemetic operations:
 
 <<loadlib>>=
 library(weyl)
