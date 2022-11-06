@@ -6,7 +6,8 @@ Depends: spray (>= 1.0-19), methods, R (>= 3.5.0)
 Authors@R: person(given=c("Robin", "K. S."), family="Hankin", role = c("aut","cre"), email="hankin.robin@gmail.com", comment = c(ORCID = "0000-0001-5982-0415"))
 Maintainer: Robin K. S. Hankin <hankin.robin@gmail.com>
 Description: A suite of routines for Weyl algebras.  Notation follows
-   Coutinho (1995, ISBN 0-521-55119-6, "A Primer of Algebraic D-Modules").
+   Coutinho (1995, ISBN 0-521-55119-6, "A Primer of Algebraic
+   D-Modules").  Uses 'disordR' discipline.
 License: GPL (>= 2)
 LazyData: yes
 Suggests: knitr,rmarkdown,testthat
