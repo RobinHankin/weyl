@@ -117,9 +117,9 @@ follow Wolf~\cite{wolf1975} and use the fact that
 (\partial^i x^j)(\partial^lx^m)=
 \sum_{r=0}^j{j\choose r}{l\choose r}\partial^{i+l-r}x^{j+m-r}.\]
 
-These rules can be used to show that $7\partial + 4\partial
-x\partial^3 x$ can be expressed as $7\partial + 12x\partial^2 +
-4x^2\partial d^3$, which is in standard form.
+These rules can be used to show, for example, that $7\partial +
+4\partial x\partial^3 x$ can be expressed as $7\partial +
+12x\partial^2 + 4x^2\partial^3$, which is in standard form.
 
 \subsection{The package in use}
 
@@ -131,18 +131,19 @@ The package includes functionality to automate the above calculations
 in an R-centric manner.  In particular, package idiom represents the
 generating elements $\partial$ and $x$ of the first Weyl algebra as R
 objects {\tt d} and {\tt x} respectively.  These may be manipulated
-with standard arithemetic operations:
+with standard arithemetic operations, and considering the example from
+above we would have:
 
 <<loadlib>>=
-library(weyl)
+library("weyl")
 7*d + 4*x*d^3*x
 @
 
-Above, the result of the input is given in standard form.  We see the
-terms, one per row, with coefficients in the rightmost column (viz
-$7,12,4$).  Thus the first row is $7\partial$, the second is
-$12x\partial^2$, and the third is $4x^2\partial^3$.  We may choose to
-display the result in symbolic form rather than matrix form:
+Above, the result is given in standard form.  We see the terms, one
+per row, with coefficients in the rightmost column (viz $7,12,4$).
+Thus the first row is $7\partial$, the second is $12x\partial^2$, and
+the third is $4x^2\partial^3$.  We may choose to display the result in
+symbolic form rather than matrix form:
 
 <<firstpolyform>>=
 options(polyform=TRUE)
