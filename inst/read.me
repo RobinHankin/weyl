@@ -1,0 +1,31 @@
+File weyl_arxiv.Rnw is basically the same as the vignette
+(vignettes/weyl.Rmd) but modified for arxiv.  The bib file is a
+modified version of vignettes/weyl.bib, now under version control.
+There might be a better way to do this.
+
+Weave  'weyl_arxiv.Rnw' with something like
+
+R CMD Sweave weyl_arxiv.Rnw
+
+(that takes about a minute).  This will create weyl_arxiv.tex.
+
+To latex weyl_arxiv.tex, you will need a couple of auxiliary files:
+
+* arxiv.sty from https://github.com/kourgeorge/arxiv-style
+* orcid.png, from https://orcid.org/signin
+* weyl.png, the hexsticker, copied from man/figures
+
+Then 
+
+pdflatex weyl_arxiv
+bibtex weyl_arxiv
+pdflatex weyl_arxiv
+pdflatex weyl_arxiv
+
+will create weyl_arxiv.pdf and weyl_arxiv.bbl
+
+These files will have to be uploaded to arxiv for it to process
+weyl_arxiv.tex; remember to upload weyl_arxiv.bbl as well.
+
+NOTE: the tex file, weyl_arxiv.tex, is NOT under version control.
+
