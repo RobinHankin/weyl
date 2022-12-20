@@ -18,10 +18,10 @@ knitr::opts_chunk$set(
 
 <img src="man/figures/weyl.png" width = "150" align="right" />
 
-
-The `weyl` package provides R-centric functionality for working with
-Weyl algebras of arbitrary dimension.  A detailed vignette is provided
-in the package.
+To cite the `weyl` package in publications please use
+@hankin2022_weyl_arxiv.  The `weyl` package provides R-centric
+functionality for working with Weyl algebras of arbitrary dimension.
+A detailed vignette is provided in the package.
 
 The Weyl algebra is a noncommutative algebra which is used in quantum
 mechanics and the theory of differential equations (Coutinho 1997).
@@ -99,6 +99,11 @@ Wsquared
 * S. C. Coutinho 1997.  _The many avatars of a simple algebra_.  The
    American Mathematical Monthly, 104(7):593-604.  DOI
    [https://doi.org/10.1080/00029890.1997.11990687](https://doi.org/10.1080/00029890.1997.11990687).
+
+* Hankin 2022. _Quantum algebra in R: the weyl package_.  Arxiv, DOI
+[https://doi.org/10.48550/ARXIV.2212.09230](https://doi.org/10.48550/ARXIV.2212.09230).
+
+
 
 
 # Further information
