@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 <img src="man/figures/weyl.png" width = "150" align="right" />
 
 To cite the `weyl` package in publications please use
-@hankin2022_weyl_arxiv.  The `weyl` package provides R-centric
+Hankin 2022.  The `weyl` package provides R-centric
 functionality for working with Weyl algebras of arbitrary dimension.
 A detailed vignette is provided in the package.
 
