@@ -2,6 +2,7 @@
 title: "Quantum algebra with R: the weyl package"
 author: "Robin K. S. Hankin"
 date: "`r Sys.Date()`"
+bibliography: weyl.bib
 vignette: >
   %\VignetteIndexEntry{The weyl package}
   %\VignetteEngine{knitr::rmarkdown}
@@ -14,11 +15,15 @@ vignette: >
 
 # The first Weyl algebra
 
+To cite the `weyl` package in publications please use
+@hankin2022_weyl_arxiv.
+
 Consider the vector space ${\mathcal A}$ of linear operators on
 univariate functions; ${\mathcal A}$ can be made into an algebra where
 multiplication (denoted by juxtaposition) is defined as operator
-composition.  That is, given operators ${\mathcal O}_1,{\mathcal O}_2$
-we define their product ${\mathcal O}_1{\mathcal O}_2$ by
+composition [@coutinho1997].  That is, given operators ${\mathcal
+O}_1,{\mathcal O}_2$ we define their product ${\mathcal O}_1{\mathcal
+O}_2$ by
 
 \[({\mathcal O}_1{\mathcal O}_2)f={\mathcal O}_1({\mathcal O}_2f).\]
 
@@ -50,7 +55,7 @@ and
 
 We can apply these rules recursively to find standard form for
 products $(\partial^i x^j)(\partial^l x^m)$.  Alternatively we may
-follow Wolf and use the fact that
+follow @wolf1975 and use the fact that
 
 \[
 (\partial^i x^j)(\partial^lx^m)=
@@ -346,10 +351,11 @@ options(polyform = NULL) # restore default print method
 
 The coefficients of a `weyl` object, and the rows of its `spray`
 matrix, are stored in an implementation-specific order.  Thus,
-extraction and replacement use the `disordR` package (Hankin 2022).  A
-short example follows in the context of the `weyl` package; a much
-more extensive and detailed discussion is given in the `disordR`
-vignette.  First we create a moderately complicated `weyl` object:
+extraction and replacement use the `disordR` package
+[@hankin2022_disordR_arxiv].  A short example follows in the context
+of the `weyl` package; a much more extensive and detailed discussion
+is given in the `disordR` vignette and in @hankin2022_disordR_arxiv.
+First we create a moderately complicated `weyl` object:
 
 ```{r,makearandomweyl}
 options(weylvars = NULL)  # revert to default names
@@ -389,14 +395,3 @@ W
 ```
 
 ## References
-
-* S. C. Coutinho 1997.  _The many avatars of a simple algebra_.  The
-   American Mathematical Monthly, 104(7):593-604.  DOI
-   [https://doi.org/10.1080/00029890.1997.11990687](https://doi.org/10.1080/00029890.1997.11990687).
-
-* K. B. Wolf 1975. _The Heisenberg-Weyl ring in quantum mechanics_.
-  In _Group theory and its applications_, Volume III, Academic Press,
-  Inc
-
-* R. K. S. Hankin 2022.  The `disordR` package.
-  [https://CRAN.R-project.org/package=disordR](https://CRAN.R-project.org/package=disordR)
