@@ -6,7 +6,7 @@
 
 \description{
 
-Printing methods for weyl objects follow those for the \pkg{spray}
+Printing methods for weyl objects follow those for the \CRANpkg{spray}
 package, with some additional functionality.
 
 }
@@ -17,7 +17,7 @@ package, with some additional functionality.
 }
 \details{
 Option \code{polyform} determines whether the object is to be printed in
-matrix form or polynomial form: as in the \pkg{spray} package, this
+matrix form or polynomial form: as in the \CRANpkg{spray} package, this
 option governs dispatch to either \code{print_spray_polyform()} or
 \code{print_spray_matrixform()}.
 
@@ -65,9 +65,9 @@ spaces].  If the algebra is univariate, the names will be something like
 not equal to the dimension, undesirable behaviour may occur.  For the
 love of God, do not use a variable named \code{d}.  Internally,
 \code{weylvars} works by changing the \code{sprayvars} option in the
-\pkg{spray} package.
+\CRANpkg{spray} package.
 
-Note that, as for the \pkg{spray} package, this option has no algebraic
+Note that, as for \code{spray} objects, this option has no algebraic
 significance: it only affects the print method.
 
 }

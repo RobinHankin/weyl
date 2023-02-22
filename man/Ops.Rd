@@ -18,7 +18,7 @@
   such as addition, multiplication, division, integer powers, etc.
 
   Idiom such as \code{x^2 + y*z/5} should work as expected.  Operations
-  are the same as those of the \pkg{spray} package except for \code{*},
+  are the same as those of the \CRANpkg{spray} package except for \code{*},
   which is interpreted as functional composition.  A number of helper
   functions are documented here (which are not designed for the
   end-user).

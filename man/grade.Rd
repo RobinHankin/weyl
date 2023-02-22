@@ -11,7 +11,7 @@
   \mjeqn{4xy^2\partial_x^3\partial_y^4}{omitted} is \mjseqn{1+2+3+4=10}.
 
   The functionality documented here closely follows the equivalent in
-  the \pkg{clifford} package.
+  the \CRANpkg{clifford} package.
 
   Coutinho calls this the \dfn{symbol map}. 
 }
