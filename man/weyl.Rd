@@ -21,6 +21,10 @@ tests for weyl objects and \code{is.ok.weyl()} checks for well-formed
 sprays.  Function \code{as.weyl()} tries (but not very hard) to infer
 what the user intended and return the right thing.
 
+To create a spray object to pass to \code{weyl()}, use function
+\code{spray()}, which is a synonym for \code{spray::spray()}.
+
+
 }
 \value{Return a weyl or a Boolean}
 \author{Robin K. S. Hankin}

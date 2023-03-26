@@ -13,6 +13,8 @@ setOldClass("weyl")
     return(TRUE)
 }
 
+`spray` <- function (M, x, addrepeats = FALSE){spray::spray(M,x,addrepeats=addrepeats)}
+                    
 `is.weyl` <- function(M){inherits(M,"weyl")}
 `as.weyl` <- function(val,d){
     if(is.weyl(val) | is.spray(val)){
@@ -31,6 +33,10 @@ setOldClass("weyl")
     weyl(rspray(n = nterms, vals = vals, arity = dim*2, powers = powers))
 }
 
+setGeneric("coeffs")
+`coeffs` <- function(S){UseMethod("coeffs")}
+
+setGeneric("coeffs<-")
 `coeffs<-` <- function(S,value){UseMethod("coeffs<-")}
 `coeffs<-.weyl` <- function(S,value){
     jj <- coeffs(S)
@@ -64,8 +70,9 @@ setOldClass("weyl")
 }
 
 `idweyl` <- function(d){weyl(spray(matrix(0,1,d*2),1))}
+setGeneric("as.id")
 `as.id.weyl` <- function(S){idweyl(dim(S))}
-`is.id` <- function(S){S == as.id(S)}
+`is.id` <- function(S){S == as.id.weyl(S)}
 
 setGeneric("dim")
 
@@ -88,3 +95,5 @@ setMethod("drop","weyl", function(x){
 `as.der` <- function(S){function(x){S*x-x*S}}
 
 setGeneric("sort")
+
+`is.zero` <- function(x){spray::is.zero(x)}
