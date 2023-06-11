@@ -41,7 +41,7 @@ ED=\sum_{i,j}g_i\frac{\partial}{\partial x_i}\,f_i\frac{\partial}{\partial x_j}
 g_i\frac{\partial f_i}{\partial x_j}\,\frac{\partial}{\partial x_j}
 $$
 
-so $E$ and $E$ ``nearly'' commute, in the sense that $ED-DE$ is _first
+so $E$ and $E$ "nearly" commute, in the sense that $ED-DE$ is _first
 order_:
 
 $$DE-ED=
@@ -56,43 +56,36 @@ the cancellation of the second-order terms.
 We can verify this using the `weyl` package:
 
 ```{r}
-D <- as.weyl(spray(cbind(matrix(sample(1:9),3,3),matrix(c(0,1,0,1,0,0,0,0,1),3,3,byrow=T)),1:3))
-E <- as.weyl(spray(cbind(matrix(sample(1:9),3,3),matrix(c(0,1,0,1,0,0,0,0,1),3,3,byrow=T)),1:3))
-F <- as.weyl(spray(cbind(matrix(sample(1:9),3,3),matrix(c(0,1,0,1,0,0,0,0,1),3,3,byrow=T)),1:3))
+D <- weyl(spray(cbind(matrix(sample(8),4,2),kronecker(diag(2),c(1,1))),1:4))
+E <- weyl(spray(cbind(matrix(sample(8),4,2),kronecker(diag(2),c(1,1))),1:4))
+F <- weyl(spray(cbind(matrix(sample(8),4,2),kronecker(diag(2),c(1,1))),1:4))
 D
 ```
 
 ($E$ and $F$ are similar).  Symbolically we would have
 
-
 $$D=
-x_1^9x_2^1x_3^3\frac{\partial}{\partial x_1}+
-x_1^4x_2^2x_3^8\frac{\partial}{\partial x_2}+
-x_1^9x_2^6x_3^5\frac{\partial}{\partial x_3}
+\left( x^6y^2 + 2xy^5\right)\frac{\partial}{\partial x}+
+\left(4x^7y^8 + 3x^4y^3\right)\frac{\partial}{\partial y}
 $$
 
-or, easier on the eye:
-
-$$D=
-x^9y^1z^3\frac{\partial}{\partial x}+
-x^4y^2z^8\frac{\partial}{\partial y}+
-x^7y^6z^5\frac{\partial}{\partial z}
-$$
-
-(and similarly for $E$).  Then to calculate $ED-DE$:
+The package allows us to compose $E$ and $D$, although the composition is quite complicated:
 
 
 ```{r}
-E*D-D*E
+summary(E*D)
 ```
 
-and we see that the Lie bracket is indeed first order.
+However, the Lie bracket, $ED-DE$, [or `.[E,D]` in package idiom) is
+indeed first order:
 
 ```{r}
 .[E,D]
 ```
 
-Jacobi's identity?
+Above we see that each row is either `1 0` or `0 1`, corresponding to
+either $\partial/\partial x$ or $\partial/\partial y$ respectively.
+We may verify Jacobi's identity:
 
 
 ```{r,verifyjacobi,cache=TRUE}
@@ -101,11 +94,24 @@ F <- as.weyl(spray(cbind(matrix(sample(1:9),3,3),matrix(c(0,1,0,1,0,0,0,0,1),3,3
 ```
 
 Borcherds goes on to consider the special case where the $f_i$ and
-$g_i$ are constant and shows that these guys commute, so their Lie
-bracket is identically zero:
+$g_i$ are constant.  In this case the operators commute (by repeated
+application of Schwarz's theorem) and so their Lie bracket is
+identically zero.  We can create constant operators easily:
 
-```{r,abelianshow,cache=TRUE}
+```{r,makeconstantops,cache=TRUE}
 (D <- as.weyl(spray(cbind(matrix(0,3,3),matrix(c(0,1,0,1,0,0,0,0,1),3,3,byrow=T)),1:3)))
 (E <- as.weyl(spray(cbind(matrix(0,3,3),matrix(c(0,1,0,1,0,0,0,0,1),3,3,byrow=T)),5:7)))
+```
+
+(above, see how the first three columns of the index matrix are zero,
+corresponding to constant coefficients of the differential operator;
+symbolically $D=2\frac{\partial}{\partial x}+\frac{\partial}{\partial
+y}+3\frac{\partial}{\partial z}$ and $E=6\frac{\partial}{\partial
+x}+5\frac{\partial}{\partial y}+7\frac{\partial}{\partial z}$.  And
+indeed, their Lie bracket vanishes:
+
+
+```{r label=abelianshow}
 .[D,E]
 ```
+
