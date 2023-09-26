@@ -20,13 +20,12 @@ knitr::include_graphics(system.file("help/figures/weyl.png", package = "weyl"))
 ```
 
 To cite this work or the `weyl` package in publications please use
-@hankin2022_weyl_arxiv.  In this short document I discuss Lie algebras
-of differential operators as implemented in the `weyl` package.  In a
-very nice [youtube
+@hankin2022_weyl_arxiv.  In a very nice [youtube
 video](https://www.youtube.com/watch?v=xVbfWunObYQ&ab_channel=RichardE.BORCHERDS),
 Richard Borcherds discusses the fact that first-order differential
 operators do not quite commute, but their commutator is itself
-first-order.  Symbolically, if
+first-order; here I discuss Borcherds's observations in the context of
+the `weyl` package.  Symbolically, if
 
 $$
 D=\sum f_i\left(x_1,\dots,x_n\right)\frac{\partial}{\partial x_i}\qquad
