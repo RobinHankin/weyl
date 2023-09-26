@@ -1,7 +1,6 @@
 ---
 title: "Quantum algebra with R: the weyl package"
 author: "Robin K. S. Hankin"
-date: "`r Sys.Date()`"
 bibliography: weyl.bib
 vignette: >
   %\VignetteIndexEntry{The weyl package}
@@ -9,21 +8,21 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-<p style="text-align: right;">
-![](`r system.file("help/figures/weyl.png", package = "weyl")`){width=10%}
-</p>
 
-# The first Weyl algebra
+# Introduction: the first Weyl algebra
 
-To cite the `weyl` package in publications please use
-@hankin2022_weyl_arxiv.
+```{r out.width='20%', out.extra='style="float:right; padding:10px"',echo=FALSE}
+knitr::include_graphics(system.file("help/figures/weyl.png", package = "weyl"))
+```
 
-Consider the vector space ${\mathcal A}$ of linear operators on
-univariate functions; ${\mathcal A}$ can be made into an algebra where
-multiplication (denoted by juxtaposition) is defined as operator
-composition [@coutinho1997].  That is, given operators ${\mathcal
-O}_1,{\mathcal O}_2$ we define their product ${\mathcal O}_1{\mathcal
-O}_2$ by
+To cite this work or the `weyl` package in publications please use
+@hankin2022_weyl_arxiv.  In this short document I show how Weyl
+algebras are implemented in the `weyl` package.  Consider the vector
+space ${\mathcal A}$ of linear operators on univariate functions;
+${\mathcal A}$ can be made into an algebra where multiplication
+(denoted by juxtaposition) is defined as operator composition
+[@coutinho1997].  That is, given operators ${\mathcal O}_1,{\mathcal
+O}_2$ we define their product ${\mathcal O}_1{\mathcal O}_2$ by
 
 \[({\mathcal O}_1{\mathcal O}_2)f={\mathcal O}_1({\mathcal O}_2f).\]
 
