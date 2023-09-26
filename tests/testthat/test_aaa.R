@@ -83,4 +83,6 @@ for(i in seq_len(3)){
     cat(paste("Test ",i, " passed\n"))
 
 }
+A1 <- rweyl(n=2,dim=1)
+checker1(A1)
 })
