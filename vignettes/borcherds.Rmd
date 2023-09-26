@@ -1,6 +1,11 @@
 ---
 title: "Lie algebras and differential operators"
-output: html_document
+author: "Robin K. S. Hankin"
+bibliography: weyl.bib
+vignette: >
+  %\VignetteIndexEntry{Differential operators}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r setup, include=FALSE}
@@ -10,15 +15,18 @@ set.seed(0)
 ```
 
 
-<p style="text-align: right;">
-![](`r system.file("help/figures/weyl.png", package = "weyl")`){width=10%}
-</p>
+```{r out.width='20%', out.extra='style="float:right; padding:10px"',echo=FALSE}
+knitr::include_graphics(system.file("help/figures/weyl.png", package = "weyl"))
+```
 
-A very nice youtube video by Borcherds
-[here](https://www.youtube.com/watch?v=xVbfWunObYQ&ab_channel=RichardE.BORCHERDS)
-discusses the fact that first-order differential operators do not
-quite commute, but their commutator is itself first-order.
-Symbolically, if
+To cite this work or the `weyl` package in publications please use
+@hankin2022_weyl_arxiv.  In this short document I discuss Lie algebras
+of differential operators as implemented in the `weyl` package.  In a
+very nice [youtube
+video](https://www.youtube.com/watch?v=xVbfWunObYQ&ab_channel=RichardE.BORCHERDS),
+Richard Borcherds discusses the fact that first-order differential
+operators do not quite commute, but their commutator is itself
+first-order.  Symbolically, if
 
 $$
 D=\sum f_i\left(x_1,\dots,x_n\right)\frac{\partial}{\partial x_i}\qquad
@@ -50,12 +58,11 @@ x_j}-g_i\frac{\partial f_i}{\partial x_j}\,\frac{\partial}{\partial
 x_j}
 $$
 
-Above we have used the fact that partial derivatives commute, whence
-the cancellation of the second-order terms.
+Above we have used the fact that partial derivatives commute, which
+leads to the cancellation of the second-order terms.  We can verify
+this using the `weyl` package:
 
-We can verify this using the `weyl` package:
-
-```{r}
+```{r defineDEF}
 D <- weyl(spray(cbind(matrix(sample(8),4,2),kronecker(diag(2),c(1,1))),1:4))
 E <- weyl(spray(cbind(matrix(sample(8),4,2),kronecker(diag(2),c(1,1))),1:4))
 F <- weyl(spray(cbind(matrix(sample(8),4,2),kronecker(diag(2),c(1,1))),1:4))
@@ -72,24 +79,31 @@ $$
 The package allows us to compose $E$ and $D$, although the composition is quite complicated:
 
 
-```{r}
+```{r sumED}
 summary(E*D)
 ```
 
-However, the Lie bracket, $ED-DE$, [or `.[E,D]` in package idiom) is
+However, the Lie bracket, $ED-DE$, (`.[E,D]` in package idiom) is
 indeed first order:
 
-```{r}
+```{r giveliebracketofEandD}
 .[E,D]
 ```
 
 Above we see that each row is either `1 0` or `0 1`, corresponding to
 either $\partial/\partial x$ or $\partial/\partial y$ respectively.
+Arguably this is easier to see with the other print method:
+
+```{r showotherprintmethod}
+options(polyform = TRUE)
+.[E,D]
+options(polyform = FALSE) # revert to default
+```
+
 We may verify Jacobi's identity:
 
 
 ```{r,verifyjacobi,cache=TRUE}
-F <- as.weyl(spray(cbind(matrix(sample(1:9),3,3),matrix(c(0,1,0,1,0,0,0,0,1),3,3,byrow=T)),1:3))
 .[D,.[E,F]] + .[F,.[D,E]] + .[E,.[F,D]]
 ```
 
