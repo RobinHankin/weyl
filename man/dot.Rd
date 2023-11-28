@@ -25,6 +25,9 @@
   and creates file \code{dot.rda} which resides in the \code{data/}
   directory.
 
+  The \code{borcherds} vignette discusses this in a more general
+  context.
+
 }
 \arguments{
   \item{x}{Object of any class}
