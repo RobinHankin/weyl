@@ -67,7 +67,7 @@ x\partial^3 x$ can be expressed as $7\partial + 12x\partial^2 +
 ## The package in use
 
 The package includes functionality to automate the above calculations.
-In particular, package idiome represents the generating elements
+In particular, package idiom represents the generating elements
 $\partial$ and $x$ of the first Weyl algebra as R objects `d` and `x`
 respectively.  These may be manipulated with standard arithemetic
 operations:
