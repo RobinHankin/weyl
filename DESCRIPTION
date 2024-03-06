@@ -13,7 +13,7 @@ Description: A suite of routines for Weyl algebras.  Notation follows
    2022 <doi:10.48550/ARXIV.2212.09230>.
 License: GPL (>= 2)
 LazyData: yes
-Suggests: knitr,rmarkdown,testthat
+Suggests: knitr,rmarkdown,testthat,covr
 VignetteBuilder: knitr
 Imports: mathjaxr, disordR (>= 0.0-8), freealg (>= 1.0-4), spray (>= 1.0-19)
 URL: https://github.com/RobinHankin/weyl
