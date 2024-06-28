@@ -40,7 +40,7 @@
 % Uncomment to override  the `A preprint' in the header
 %\renewcommand{\headeright}{Technical Report}
 %\renewcommand{\undertitle}{Technical Report}
-\renewcommand{\shorttitle}{Quantum algebra in R}
+%\renewcommand{\shorttitle}{Quantum algebra in R}
 
 %%% Add PDF metadata to help others organize their library
 %%% Once the PDF is generated, you can check the metadata with
@@ -487,6 +487,6 @@ $x_jp_j-p_jx_j=-i$.  Further work might include admitting complex
 coefficients to accommodate this parametrization.
 
 \bibliographystyle{apalike}
-\bibliography{weyl_arxiv}
+\bibliography{weyl}
 
 \end{document}
