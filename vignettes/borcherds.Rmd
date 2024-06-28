@@ -23,9 +23,9 @@ To cite this work or the `weyl` package in publications please use
 @hankin2022_weyl_arxiv.  In a very nice [youtube
 video](https://www.youtube.com/watch?v=xVbfWunObYQ&ab_channel=RichardE.BORCHERDS),
 Richard Borcherds discusses the fact that first-order differential
-operators do not quite commute, but their commutator is itself
-first-order; here I demonstrate Borcherds's observations in the
-context of the `weyl` package.  Symbolically, if
+operators do not commute, but their commutator is itself first-order;
+he says that they "almost" commute.  Here I demonstrate Borcherds's
+observations in the context of the `weyl` package.  Symbolically, if
 
 $$
 D=\sum f_i\left(x_1,\dots,x_n\right)\frac{\partial}{\partial x_i}\qquad
@@ -72,10 +72,11 @@ D
 
 $$D=
 \left( x^6y^2 + 2xy^5\right)\frac{\partial}{\partial x}+
-\left(4x^7y^8 + 3x^4y^3\right)\frac{\partial}{\partial y}
+\left(4x^7y^8 + 3x^4y^3\right)\frac{\partial}{\partial y}.
 $$
 
-The package allows us to compose $E$ and $D$, although the composition is quite complicated:
+The package allows us to compose $E$ and $D$, although the result is
+quite complicated:
 
 
 ```{r sumED}
@@ -89,9 +90,10 @@ indeed first order:
 .[E,D]
 ```
 
-Above we see that each row is either `1 0` or `0 1`, corresponding to
-either $\partial/\partial x$ or $\partial/\partial y$ respectively.
-Arguably this is easier to see with the other print method:
+Above, looking at the `dx` and `dy` columns, we see that each row is
+either `1 0` or `0 1`, corresponding to either $\partial/\partial x$
+or $\partial/\partial y$ respectively.  Arguably this is easier to see
+with the other print method:
 
 ```{r showotherprintmethod}
 options(polyform = TRUE)
@@ -100,7 +102,6 @@ options(polyform = FALSE) # revert to default
 ```
 
 We may verify Jacobi's identity:
-
 
 ```{r,verifyjacobi,cache=TRUE}
 .[D,.[E,F]] + .[F,.[D,E]] + .[E,.[F,D]]
