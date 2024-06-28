@@ -373,7 +373,7 @@ defined.  If we try we will get an error:
 
 
 ```{r,showdisorderror,error=TRUE}
-coeffs(W)[1]
+try(coeffs(W)[1] , silent=FALSE)
 ```
 
 However, it is perfectly well defined to ask "give all coefficients
