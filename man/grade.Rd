@@ -4,11 +4,11 @@
 \alias{grade<-}
 \alias{grades}
 \title{The grade of a weyl object}
-\description{\loadmathjax
+\description{
 
   The \dfn{grade} of a homogeneous term of a Weyl algebra is the sum of
   the powers.  Thus the grade of
-  \mjeqn{4xy^2\partial_x^3\partial_y^4}{omitted} is \mjseqn{1+2+3+4=10}.
+  \eqn{4xy^2\partial_x^3\partial_y^4}{omitted} is \eqn{1+2+3+4=10}.
 
   The functionality documented here closely follows the equivalent in
   the \CRANpkg{clifford} package.

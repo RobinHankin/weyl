@@ -7,7 +7,7 @@
 \description{
 \packageDescription{weyl}
 }
-\details{\loadmathjax
+\details{
 
 The DESCRIPTION file:
 \packageDESCRIPTION{weyl}

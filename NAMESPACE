@@ -1,8 +1,8 @@
+
 exportPattern("^[[:alpha:]]+")
 S3method(Ops,weyl)
 importFrom("disordR","elements")
 import("spray")
-import("mathjaxr")
 import("methods")
 
 importFrom(disordR,disord)
