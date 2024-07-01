@@ -61,6 +61,10 @@ test_that("Test suite aaa.R",{
     expect_true(weyl(weyl_prod_univariate_nrow(a,b)) == a*b)
 
     expect_true((d*x)^2 == (d*x)*(d*x))
+
+
+    expect_true(d^5 == weyl(spray(cbind(0,5))))
+    expect_true(x^7 == weyl(spray(cbind(7,0))))
     
     options("prodfunc" = NULL)
     a0 <- a*b
