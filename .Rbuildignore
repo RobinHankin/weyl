@@ -18,3 +18,5 @@
 
 ^.github$
 ^.devcontainer$
+^CODE_OF_CONDUCT.md$
+^CONTRIBUTING.md$
