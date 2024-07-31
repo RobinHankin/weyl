@@ -24,3 +24,5 @@ S3method("coeffs<-",weyl)
 S3method(dim,weyl)
 S3method(as.id,weyl)
 
+S3method("[",weyl)
+S3method("[<-",weyl)
