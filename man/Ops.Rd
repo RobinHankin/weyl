@@ -72,6 +72,9 @@ efficiency-readability scale.  The option defaults to
 \code{weyl_prod_helper3()}, which is the fastest but most opaque.  The
 vignette provides further details, motivation, and examples.
 
+Powers, as in \code{x^n}, are defined in the usual way.  Negative powers
+will always return an error.
+
 }
 \value{Generally, return a weyl object}
 \author{Robin K. S. Hankin}

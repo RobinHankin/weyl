@@ -135,14 +135,13 @@
 
 `weyl_power_scalar` <- function(S,n){
   stopifnot(n==round(n))
+  if(n<0){stop("use ooom() for negative powers")}
   jj <- as.vector(index(S))
   if(length(jj)==2){
       if(all(jj==c(0,1))){return(weyl(spray(t(c(0,n)),coeffs(S)^n)))}
       if(all(jj==c(1,0))){return(weyl(spray(t(c(n,0)),coeffs(S)^n)))}
   }
-  if(n<0){
-      stop("use ooom() for negative powers")
-  } else if(n==0){
+  if(n==0){
       return(one(S))
   } else if(n==1){
       return(S)
