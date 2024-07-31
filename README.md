@@ -6,7 +6,7 @@ Weyl algebra in R
 <img src="man/figures/weyl.png" width = "150" align="right" />
 
 <!-- badges: start --> [![Codecov test
-coverage](https://codecov.io/gh/RobinHankin/weyl/graph/badge.svg)](https://app.codecov.io/gh/RobinHankin/weyl)
+coverage](https://codecov.io/gh/RobinHankin/weyl/branch/master/graph/badge.svg)](https://app.codecov.io/gh/RobinHankin/weyl?branch=master)
 <!-- badges: end -->
 
 To cite the `weyl` package in publications please use Hankin 2022. The
