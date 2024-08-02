@@ -1,3 +1,11 @@
+# weyl 0.0-6
+
+- github workflow
+- pkgdown
+- code of conduct
+- Fix intermittend testing problem
+
+- 
 # weyl 0.0-5
 
 - bugfixes
