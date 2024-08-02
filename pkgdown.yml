@@ -1,0 +1,10 @@
+pandoc: 3.1.11
+pkgdown: 2.1.0
+pkgdown_sha: ~
+articles:
+  borcherds: borcherds.html
+  weyl: weyl.html
+last_built: 2024-08-02T14:55Z
+urls:
+  reference: https://robinhankin.github.io/weyl/reference
+  article: https://robinhankin.github.io/weyl/articles
