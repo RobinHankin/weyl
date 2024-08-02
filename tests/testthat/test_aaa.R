@@ -50,6 +50,10 @@ checker1 <- function(A){
   expect_output(print(A))
   options("polyform" = TRUE)
   expect_output(print(A))
+
+  expect_true(ooom(A,1)*(1-A) == 1-A^2)
+  expect_true(ooom(A,2)*(1-A) == 1-A^3)
+  expect_true(ooom(A,3)*(1-A) == 1-A^4)
     
   
 }   # checker1() closes

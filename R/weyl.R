@@ -97,3 +97,18 @@ setMethod("drop","weyl", function(x){
 setGeneric("sort")
 
 `is.zero` <- function(x){spray::is.zero(x)}
+
+`horner` <- function(W, v) {
+    W <- as.weyl(W)
+    Reduce(v, right=TRUE, f=function(a,b){b*W + a})
+}
+
+`ooom` <- function(W, n){
+  stopifnot(constant(W)==0)
+  stopifnot(n>=0)
+  if(n==0){
+    return(as.id(W))
+  } else {
+    return(horner(W,rep(1,n+1)))
+  }
+}
