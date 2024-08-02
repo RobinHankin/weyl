@@ -27,6 +27,6 @@
         }
         out <- print_spray_matrixform(x)
     }
-    return(weyl(out))
+    return(invisible(weyl(out)))
 }
 
