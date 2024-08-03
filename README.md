@@ -5,8 +5,11 @@ Weyl algebra in R
 
 <img src="man/figures/weyl.png" width = "150" align="right" />
 
-<!-- badges: start --> [![Codecov test
+<!-- badges: start -->
+
+[![Codecov test
 coverage](https://codecov.io/gh/RobinHankin/weyl/branch/master/graph/badge.svg)](https://app.codecov.io/gh/RobinHankin/weyl?branch=master)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/weyl?color=green)](https://cran.r-project.org/package=weyl)
 <!-- badges: end -->
 
 To cite the `weyl` package in publications please use Hankin 2022. The
