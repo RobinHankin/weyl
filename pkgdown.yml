@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   borcherds: borcherds.html
   weyl: weyl.html
-last_built: 2024-08-02T14:55Z
+last_built: 2024-08-03T17:26Z
 urls:
   reference: https://robinhankin.github.io/weyl/reference
   article: https://robinhankin.github.io/weyl/articles
