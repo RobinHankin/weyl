@@ -10,6 +10,8 @@ Weyl algebra in R
 [![Codecov test
 coverage](https://codecov.io/gh/RobinHankin/weyl/branch/master/graph/badge.svg)](https://app.codecov.io/gh/RobinHankin/weyl?branch=master)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/weyl?color=green)](https://cran.r-project.org/package=weyl)
+[![Codecov test
+coverage](https://codecov.io/gh/RobinHankin/weyl/graph/badge.svg)](https://app.codecov.io/gh/RobinHankin/weyl)
 <!-- badges: end -->
 
 To cite the `weyl` package in publications please use Hankin 2022. The
