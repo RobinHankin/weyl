@@ -16,14 +16,16 @@ is.ok.weyl(M)
   \item{val,d}{Value and dimension for weyl object}
 }
 \details{
+
+  To create a weyl object, pass a spray to function \code{weyl()}, as in
+  \code{weyl(M)}.  To create a spray object to pass to \code{weyl()},
+  use function \code{spray()}, which is a synonym for
+  \code{spray::spray()}.
+
 Function \code{weyl()} is the formal creator method; \code{is.weyl()}
 tests for weyl objects and \code{is.ok.weyl()} checks for well-formed
 sprays.  Function \code{as.weyl()} tries (but not very hard) to infer
 what the user intended and return the right thing.
-
-To create a spray object to pass to \code{weyl()}, use function
-\code{spray()}, which is a synonym for \code{spray::spray()}.
-
 
 }
 \value{Return a weyl or a Boolean}
@@ -34,4 +36,8 @@ To create a spray object to pass to \code{weyl()}, use function
 weyl(W)
 
 as.weyl(15,d=3)
+
+is.ok.weyl(spray(matrix(1:30,5,6)))
+is.ok.weyl(spray(matrix(1:30,6,5)))
+
 }
