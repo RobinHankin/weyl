@@ -62,14 +62,16 @@
 </dl></div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>Function <code>weyl()</code> is the formal creator method; <code>is.weyl()</code>
+
+
+<p>To create a weyl object, pass a spray to function <code>weyl()</code>, as in
+  <code>weyl(M)</code>.  To create a spray object to pass to <code>weyl()</code>,
+  use function <code><a href="spray.html">spray()</a></code>, which is a synonym for
+  <code><a href="https://robinhankin.github.io/spray/reference/spray.html" class="external-link">spray::spray()</a></code>.</p>
+<p>Function <code>weyl()</code> is the formal creator method; <code>is.weyl()</code>
 tests for weyl objects and <code>is.ok.weyl()</code> checks for well-formed
 sprays.  Function <code>as.weyl()</code> tries (but not very hard) to infer
 what the user intended and return the right thing.</p>
-<p>To create a spray object to pass to <code>weyl()</code>, use function
-<code><a href="spray.html">spray()</a></code>, which is a synonym for <code><a href="https://rdrr.io/pkg/spray/man/spray.html" class="external-link">spray::spray()</a></code>.</p>
-
-
     </div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
@@ -96,6 +98,12 @@ what the user intended and return the right thing.</p>
 <span class="r-in"><span><span class="fu">as.weyl</span><span class="op">(</span><span class="fl">15</span>,d<span class="op">=</span><span class="fl">3</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> A member of the Weyl algebra:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 15</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">is.ok.weyl</span><span class="op">(</span><span class="fu"><a href="spray.html">spray</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">30</span>,<span class="fl">5</span>,<span class="fl">6</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
+<span class="r-in"><span><span class="fu">is.ok.weyl</span><span class="op">(</span><span class="fu"><a href="spray.html">spray</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">30</span>,<span class="fl">6</span>,<span class="fl">5</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in is.ok.weyl(spray(matrix(1:30, 6, 5))):</span> arity(M)%%2 == 0 is not TRUE</span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
