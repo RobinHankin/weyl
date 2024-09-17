@@ -8,11 +8,15 @@
 setOldClass("weyl")
 
 `is.ok.weyl` <- function(M){
-    stopifnot(is.spray(M))
-    stopifnot(arity(M)%%2 == 0)
-    return(TRUE)
+    if(!is.spray(M)){
+        return("need a spray")
+    } else if(arity(M)%%2 != 0){
+        return("arity must be even")
+    } else {
+        return(TRUE)
+    }
 }
-
+    
 `spray` <- function (M, x, addrepeats = FALSE){spray::spray(M,x,addrepeats=addrepeats)}
                     
 `is.weyl` <- function(M){inherits(M,"weyl")}
