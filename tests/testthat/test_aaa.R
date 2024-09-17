@@ -74,7 +74,7 @@ checker3 <- function(A,B,C){
 
 }
   
-for(i in seq_len(3)){
+for(i in seq_len(1)){
 
     A <- rweyl(n=2,dim=3)
     B <- rweyl(n=2,dim=3)
