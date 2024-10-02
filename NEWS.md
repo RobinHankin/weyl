@@ -1,5 +1,6 @@
 # weyl 0.0-6
 
+- rweyll() and rweylll()
 - github workflow
 - pkgdown
 - code of conduct

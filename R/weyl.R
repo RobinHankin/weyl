@@ -37,6 +37,14 @@ setOldClass("weyl")
     weyl(rspray(n = nterms, vals = vals, arity = dim*2, powers = powers))
 }
 
+`rweyll` <- function(nterms = 15, vals = seq_len(nterms), dim = 4, powers = 0:5){
+    rweyl(nterms = nterms, vals = vals, dim = dim, powers = powers)
+}
+
+`rweylll` <- function(nterms = 50, vals = seq_len(nterms), dim = 8, powers = 0:7){
+    rweyl(nterms = nterms, vals = vals, dim = dim, powers = powers)
+}
+
 setGeneric("coeffs")
 `coeffs` <- function(S){UseMethod("coeffs")}
 
