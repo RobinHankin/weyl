@@ -82,20 +82,27 @@
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="op">(</span><span class="va">W</span> <span class="op">&lt;-</span> <span class="fu">spray</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">36</span>,<span class="fl">6</span>,<span class="fl">6</span><span class="op">)</span>,<span class="fl">1</span><span class="op">:</span><span class="fl">6</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> +6*x1^6*x2^12*x3^18*x4^24*x5^30*x6^36</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> +3*x1^3*x2^9*x3^15*x4^21*x5^27*x6^33</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> +5*x1^5*x2^11*x3^17*x4^23*x5^29*x6^35</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> +4*x1^4*x2^10*x3^16*x4^22*x5^28*x6^34</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> +2*x1^2*x2^8*x3^14*x4^20*x5^26*x6^32 +x1*x2^7*x3^13*x4^19*x5^25*x6^31</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  x  d NA NA NA NA     val</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  6 12 18 24 30 36  =    6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  3  9 15 21 27 33  =    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  5 11 17 23 29 35  =    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  4 10 16 22 28 34  =    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  2  8 14 20 26 32  =    2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  1  7 13 19 25 31  =    1</span>
 <span class="r-in"><span><span class="fu"><a href="weyl.html">weyl</a></span><span class="op">(</span><span class="va">W</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> A member of the Weyl algebra:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> +6*x^6*y^12*z^18*dx^24*dy^30*dz^36 +3*x^3*y^9*z^15*dx^21*dy^27*dz^33</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> +5*x^5*y^11*z^17*dx^23*dy^29*dz^35 +4*x^4*y^10*z^16*dx^22*dy^28*dz^34</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> +2*x^2*y^8*z^14*dx^20*dy^26*dz^32 +x*y^7*z^13*dx^19*dy^25*dz^31</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   x  y  z dx dy dz     val</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   6 12 18 24 30 36  =    6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   3  9 15 21 27 33  =    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   5 11 17 23 29 35  =    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   4 10 16 22 28 34  =    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2  8 14 20 26 32  =    2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  7 13 19 25 31  =    1</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="weyl.html">as.weyl</a></span><span class="op">(</span><span class="fl">15</span>,d<span class="op">=</span><span class="fl">3</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> A member of the Weyl algebra:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   x  y  z dx dy dz     val</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   0  0  0  0  0  0  =   15</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

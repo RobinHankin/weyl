@@ -73,6 +73,7 @@ elements</p>
     <p>Function <code>rweyl()</code> creates a smallish random Weyl object;
 <code>rweyll()</code> and <code>rweylll()</code> create successively more
 complicated objects.</p>
+<p>Function <code>rweyl1()</code> returns a one-dimensional Weyl object.</p>
     </div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
@@ -105,6 +106,13 @@ complicated objects.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> +3*x1*x2^2*x7*d2^2*d3^2*d4^2*d5*d6*d7^2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> +2*x1*x3^2*x5^2*d1*d2^2*d3^2*d4^2*d5^2*d6^2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> +x1*x2*x3*x4^2*x5^2*x6^2*x7*d1*d2^2*d4*d5^2*d6^2*d7</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>polyform <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">rweyl1</span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A member of the Weyl algebra:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> +5*x^3*d +4*x^3*d^2 +2*x^3*d^3 +6*x^2*d +3*x*d +x^4*d^4</span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>polyform <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="co"># restore default</span></span></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

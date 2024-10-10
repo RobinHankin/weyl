@@ -86,18 +86,27 @@ what the user intended and return the right thing.</p>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="op">(</span><span class="va">W</span> <span class="op">&lt;-</span> <span class="fu"><a href="spray.html">spray</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">36</span>,<span class="fl">6</span>,<span class="fl">6</span><span class="op">)</span>,<span class="fl">1</span><span class="op">:</span><span class="fl">6</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> +6*x^6*y^12*z^18*dx^24*dy^30*dz^36 +3*x^3*y^9*z^15*dx^21*dy^27*dz^33</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> +5*x^5*y^11*z^17*dx^23*dy^29*dz^35 +4*x^4*y^10*z^16*dx^22*dy^28*dz^34</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> +2*x^2*y^8*z^14*dx^20*dy^26*dz^32 +x*y^7*z^13*dx^19*dy^25*dz^31</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   x  y  z dx dy dz     val</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   6 12 18 24 30 36  =    6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   3  9 15 21 27 33  =    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   5 11 17 23 29 35  =    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   4 10 16 22 28 34  =    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2  8 14 20 26 32  =    2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  7 13 19 25 31  =    1</span>
 <span class="r-in"><span><span class="fu">weyl</span><span class="op">(</span><span class="va">W</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> A member of the Weyl algebra:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> +6*x^6*y^12*z^18*dx^24*dy^30*dz^36 +3*x^3*y^9*z^15*dx^21*dy^27*dz^33</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> +5*x^5*y^11*z^17*dx^23*dy^29*dz^35 +4*x^4*y^10*z^16*dx^22*dy^28*dz^34</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> +2*x^2*y^8*z^14*dx^20*dy^26*dz^32 +x*y^7*z^13*dx^19*dy^25*dz^31</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   x  y  z dx dy dz     val</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   6 12 18 24 30 36  =    6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   3  9 15 21 27 33  =    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   5 11 17 23 29 35  =    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   4 10 16 22 28 34  =    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2  8 14 20 26 32  =    2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  7 13 19 25 31  =    1</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">as.weyl</span><span class="op">(</span><span class="fl">15</span>,d<span class="op">=</span><span class="fl">3</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> A member of the Weyl algebra:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   x  y  z dx dy dz     val</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   0  0  0  0  0  0  =   15</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">is.ok.weyl</span><span class="op">(</span><span class="fu"><a href="spray.html">spray</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">30</span>,<span class="fl">5</span>,<span class="fl">6</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
