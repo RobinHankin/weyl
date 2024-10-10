@@ -2,6 +2,7 @@
 \alias{rweyl}
 \alias{rweyll}
 \alias{rweylll}
+\alias{rweyl1}
 \title{Random weyl objects}
 \description{
 Creates random weyl objects: quick-and-dirty examples of Weyl algebra
@@ -21,6 +22,9 @@ rweylll(nterms = 50, vals = seq_len(nterms), dim = 8, powers = 0:7)
 Function \code{rweyl()} creates a smallish random Weyl object;
 \code{rweyll()} and \code{rweylll()} create successively more
 complicated objects.
+
+Function \code{rweyl1()} returns a one-dimensional Weyl object.
+
 }
   
 \value{Returns a weyl object}
@@ -29,4 +33,9 @@ complicated objects.
 rweyl()
 rweyll()
 rweyl(d=7)
+
+options(polyform = TRUE)
+rweyl1()
+options(polyform = FALSE) # restore default
+
 }

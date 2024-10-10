@@ -45,6 +45,10 @@ setOldClass("weyl")
     rweyl(nterms = nterms, vals = vals, dim = dim, powers = powers)
 }
 
+`rweyl1` <- function(nterms = 6, vals = seq_len(nterms), dim = 1, powers = 1:5){
+    rweyl(nterms = nterms, vals = vals, dim = dim, powers = powers)
+    }
+
 setGeneric("coeffs")
 `coeffs` <- function(S){UseMethod("coeffs")}
 
