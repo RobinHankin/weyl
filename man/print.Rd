@@ -2,6 +2,7 @@
 \alias{print.weyl}
 \alias{print}
 \alias{weylvars}
+\alias{polyform}
 \title{Print methods for weyl objects}
 
 \description{
