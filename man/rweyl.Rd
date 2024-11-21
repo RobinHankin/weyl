@@ -23,7 +23,13 @@ Function \code{rweyl()} creates a smallish random Weyl object;
 \code{rweyll()} and \code{rweylll()} create successively more
 complicated objects.
 
+These functions use \code{spray::rspray()}, so the note there about
+repeated rows in the index matrix resulting in fewer than \code{nterms}
+terms applies.
+
 Function \code{rweyl1()} returns a one-dimensional Weyl object.
+
+
 
 }
   
