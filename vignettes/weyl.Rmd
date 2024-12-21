@@ -2,6 +2,7 @@
 title: "Quantum algebra with R: the weyl package"
 author: "Robin K. S. Hankin"
 bibliography: weyl.bib
+link-citations: true
 vignette: >
   %\VignetteIndexEntry{The weyl package}
   %\VignetteEngine{knitr::rmarkdown}
