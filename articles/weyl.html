@@ -70,14 +70,15 @@ Hankin</h4>
     
 <p><img src="..%2F..%2F..%2F_temp%2FLibrary%2Fweyl%2Fhelp%2Ffigures%2Fweyl.png" width="20%" style="float:right; padding:10px"></p>
 <p>To cite this work or the <code>weyl</code> package in publications
-please use <span class="citation">Hankin (2022b)</span>. In this short
+please use <span class="citation">Hankin (<a href="#ref-hankin2022_weyl_arxiv">2022b</a>)</span>. In this short
 document I show how Weyl algebras are implemented in the
 <code>weyl</code> package. Consider the vector space
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝒜</mi><annotation encoding="application/x-tex">{\mathcal A}</annotation></semantics></math>
 of linear operators on univariate functions;
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝒜</mi><annotation encoding="application/x-tex">{\mathcal A}</annotation></semantics></math>
 can be made into an algebra where multiplication (denoted by
-juxtaposition) is defined as operator composition <span class="citation">(Coutinho 1997)</span>. That is, given operators
+juxtaposition) is defined as operator composition <span class="citation">(<a href="#ref-coutinho1997">Coutinho 1997</a>)</span>.
+That is, given operators
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝒪</mi><mn>1</mn></msub><mo>,</mo><msub><mi>𝒪</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">{\mathcal O}_1,{\mathcal
 O}_2</annotation></semantics></math> and scalar
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
@@ -134,8 +135,7 @@ have</p>
 <p>We can apply these rules recursively to find standard form for
 products
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>∂</mi><mi>i</mi></msup><msup><mi>x</mi><mi>j</mi></msup><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>∂</mi><mi>l</mi></msup><msup><mi>x</mi><mi>m</mi></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">(\partial^i x^j)(\partial^l x^m)</annotation></semantics></math>.
-Alternatively we may follow <span class="citation">Wolf (1975)</span>
-and use the fact that</p>
+Alternatively we may follow <span class="citation">Wolf (<a href="#ref-wolf1975">1975</a>)</span> and use the fact that</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>∂</mi><mi>i</mi></msup><msup><mi>x</mi><mi>j</mi></msup><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>∂</mi><mi>l</mi></msup><msup><mi>x</mi><mi>m</mi></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><munderover><mo>∑</mo><mrow><mi>r</mi><mo>=</mo><mn>0</mn></mrow><mi>j</mi></munderover><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>j</mi><mi>r</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>l</mi><mi>r</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><msup><mi>∂</mi><mrow><mi>i</mi><mo>+</mo><mi>l</mi><mo>−</mo><mi>r</mi></mrow></msup><msup><mi>x</mi><mrow><mi>j</mi><mo>+</mo><mi>m</mi><mo>−</mo><mi>r</mi></mrow></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">
 (\partial^i x^j)(\partial^lx^m)=
 \sum_{r=0}^j{j\choose r}{l\choose r}\partial^{i+l-r}x^{j+m-r}.</annotation></semantics></math></p>
@@ -392,7 +392,7 @@ recurrence relation used. This defaults to
 <span><span class="co">##     }</span></span>
 <span><span class="co">##     spray(ind, val, addrepeats = TRUE)</span></span>
 <span><span class="co">## }</span></span>
-<span><span class="co">## &lt;bytecode: 0x55a6dad2cc50&gt;</span></span>
+<span><span class="co">## &lt;bytecode: 0x55ba9c70f100&gt;</span></span>
 <span><span class="co">## &lt;environment: namespace:weyl&gt;</span></span></code></pre>
 <p>Function <code><a href="../reference/Ops.html">weyl_prod_helper3()</a></code> follows Wolf. This gives
 the univariate concatenation product
@@ -524,11 +524,11 @@ to evaluate
 <p>The coefficients of a <code>weyl</code> object, and the rows of its
 <code>spray</code> matrix, are stored in an implementation-specific
 order. Thus, extraction and replacement use the <code>disordR</code>
-package <span class="citation">(Hankin 2022a)</span>. A short example
-follows in the context of the <code>weyl</code> package; a much more
-extensive and detailed discussion is given in the <code>disordR</code>
-vignette and in <span class="citation">Hankin (2022a)</span>. First we
-create a moderately complicated <code>weyl</code> object:</p>
+package <span class="citation">(<a href="#ref-hankin2022_disordR_arxiv">Hankin 2022a</a>)</span>. A short
+example follows in the context of the <code>weyl</code> package; a much
+more extensive and detailed discussion is given in the
+<code>disordR</code> vignette and in <span class="citation">Hankin (<a href="#ref-hankin2022_disordR_arxiv">2022a</a>)</span>. First we create
+a moderately complicated <code>weyl</code> object:</p>
 <div class="sourceCode" id="cb47"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>weylvars <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span>  <span class="co"># revert to default names</span></span>
 <span><span class="op">(</span><span class="va">W</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/weyl.html">weyl</a></span><span class="op">(</span><span class="fu"><a href="../reference/spray.html">spray</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">1</span>,<span class="fl">0</span><span class="op">)</span>,<span class="fl">2</span>,<span class="fl">4</span><span class="op">)</span>,<span class="fl">2</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span><span class="op">)</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span></span></code></pre></div>
