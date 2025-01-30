@@ -4,7 +4,7 @@
 - github workflow
 - pkgdown
 - code of conduct
-- Fix intermittend testing problem
+- Fixed intermittent testing problem
 
 - 
 # weyl 0.0-5
