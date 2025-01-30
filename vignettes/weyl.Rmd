@@ -179,6 +179,7 @@ The package can deal with arbitrarily high dimensional Weyl algebras.
 For example:
 
 ```{r}
+options(polyform=FALSE) # default print method
 (x9 <- rweyl(dim=9))
 ```
 
