@@ -47,45 +47,45 @@ setOldClass("weyl")
 
 `rweyl1` <- function(nterms = 6, vals = seq_len(nterms), dim = 1, powers = 1:5){
     rweyl(nterms = nterms, vals = vals, dim = dim, powers = powers)
-    }
+}
 
 setGeneric("coeffs")
 `coeffs` <- function(S){UseMethod("coeffs")}
 
 setGeneric("coeffs<-")
-`coeffs<-` <- function(S,value){UseMethod("coeffs<-")}
-`coeffs<-.weyl` <- function(S,value){
+`coeffs<-` <- function(S, value){UseMethod("coeffs<-")}
+`coeffs<-.weyl` <- function(S, value){
     jj <- coeffs(S)
     if(is.disord(value)){
-        stopifnot(consistent(coeffs(S),value))
-        if((!identical(hash(jj),hash(value))) & (length(value)>1)){stop("length > 1")}
+        stopifnot(consistent(coeffs(S), value))
+        if((!identical(hash(jj), hash(value))) & (length(value) > 1)){stop("length > 1")}
         jj <- value
     } else {
-        stopifnot(length(value)==1)
+        stopifnot(length(value) == 1)
         jj[] <- value  # the meat
     }
-    return(weyl(spray(index(S),elements(jj))))
+    return(weyl(spray(index(S), elements(jj))))
 }
 
-`constant` <- function(x,drop=TRUE){UseMethod("constant")}
-`constant.weyl` <- function(x,drop=TRUE){
+`constant` <- function(x, drop = TRUE){UseMethod("constant")}
+`constant.weyl` <- function(x, drop = TRUE){
     class(x) <- setdiff(class(x),"weyl")
-    out <- constant(x,drop=TRUE)
+    out <- constant(x, drop = TRUE)
     if(drop){
         return(out)
     } else { # not dropped
-        return(weyl(spraymaker(spray(matrix(0,1,arity(x)), out),arity=arity(x))))
+        return(weyl(spraymaker(spray(matrix(0, 1, arity(x)), out), arity = arity(x))))
     }
 }
 
 `constant<-` <- function(x, value){UseMethod("constant<-")}
-`constant<-.weyl` <- function(x,value){
-    class(x) <- setdiff(class(x),"weyl")
+`constant<-.weyl` <- function(x, value){
+    class(x) <- setdiff(class(x), "weyl")
     constant(x) <- value
     return(weyl(x))
 }
 
-`idweyl` <- function(d){weyl(spray(matrix(0,1,d*2),1))}
+`idweyl` <- function(d){weyl(spray(matrix(0, 1, d*2), 1))}
 setGeneric("as.id")
 `as.id.weyl` <- function(S){idweyl(dim(S))}
 `is.id` <- function(S){S == as.id.weyl(S)}
@@ -99,16 +99,16 @@ setMethod("drop","weyl", function(x){
     if(is.zero(x)){
         return(0)
     } else if(is.constant(x)){
-        return(constant(x,drop=TRUE))
+        return(constant(x, drop = TRUE))
     } else {
         return(x)
     }
 })
 
-`deg` <- function(S){max(c(-Inf,rowSums(index(S))))} # following Coutinho
-`zero` <- function(d){weyl(spray(matrix(0,0,2*d),numeric(0)))}
+`deg` <- function(S){max(c(-Inf, rowSums(index(S))))} # following Coutinho
+`zero` <- function(d){weyl(spray(matrix(0, 0, 2*d), numeric(0)))}
 
-`as.der` <- function(S){function(x){S*x-x*S}}
+`as.der` <- function(S){function(x){S*x - x*S}}
 
 setGeneric("sort")
 
@@ -116,15 +116,15 @@ setGeneric("sort")
 
 `horner` <- function(W, v) {
     W <- as.weyl(W)
-    Reduce(v, right=TRUE, f=function(a,b){b*W + a})
+    Reduce(v, right = TRUE, f = function(a, b){b*W + a})
 }
 
 `ooom` <- function(W, n){
-  stopifnot(constant(W)==0)
-  stopifnot(n>=0)
-  if(n==0){
+  stopifnot(constant(W) == 0)
+  stopifnot(n >= 0)
+  if(n == 0){
     return(as.id(W))
   } else {
-    return(horner(W,rep(1,n+1)))
+    return(horner(W, rep(1, n+1)))
   }
 }
