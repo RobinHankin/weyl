@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">weyl</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0-6</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0-7</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -119,31 +119,41 @@ to
 + 4\left(x\left(xf\right)'''\right)'</annotation></semantics></math>.
 It can be shown that any element of the Weyl algebra can be expressed in
 the standard form</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mo>∑</mo><mi>i</mi></munder><msub><mi>a</mi><mi>i</mi></msub><msup><mi>∂</mi><msub><mi>p</mi><mi>i</mi></msub></msup><msup><mi>x</mi><msub><mi>q</mi><mi>i</mi></msub></msup></mrow><annotation encoding="application/x-tex">
-\sum_i a_i \partial^{p_i}x^{q_i}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mo>∑</mo><mi>i</mi></munder><msub><mi>a</mi><mi>i</mi></msub><msup><mi>x</mi><msub><mi>q</mi><mi>i</mi></msub></msup><msup><mi>∂</mi><msub><mi>p</mi><mi>i</mi></msub></msup></mrow><annotation encoding="application/x-tex">\sum_i a_i x^{q_i}\partial^{p_i}</annotation></semantics></math></p>
 <p>for real
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>i</mi></msub><annotation encoding="application/x-tex">a_i</annotation></semantics></math>
 and nonnegative integers
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mi>i</mi></msub><mo>,</mo><msub><mi>q</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">p_i,q_i</annotation></semantics></math>.
-Converting a general word to standard form is not straightforward but we
-have</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∂</mi><msup><mi>x</mi><mi>n</mi></msup><mo>=</mo><msup><mi>x</mi><mi>n</mi></msup><mi>∂</mi><mo>+</mo><mi>n</mi><msup><mi>x</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">
-\partial x^n = x^n\partial +  nx^{n-1}</annotation></semantics></math></p>
-<p>and</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∂</mi><mi>n</mi></msup><mi>x</mi><mo>=</mo><mi>x</mi><msup><mi>∂</mi><mi>n</mi></msup><mo>+</mo><mi>n</mi><msup><mi>∂</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">
-\partial^n x = x\partial^n +  n\partial^{n-1}.</annotation></semantics></math></p>
-<p>We can apply these rules recursively to find standard form for
-products
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>∂</mi><mi>i</mi></msup><msup><mi>x</mi><mi>j</mi></msup><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>∂</mi><mi>l</mi></msup><msup><mi>x</mi><mi>m</mi></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">(\partial^i x^j)(\partial^l x^m)</annotation></semantics></math>.
+Standard form is desirable operationally: it is a lot easier to evaluate
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mi>i</mi></msup><msup><mi>∂</mi><mi>j</mi></msup></mrow><annotation encoding="application/x-tex">x^i\partial^j</annotation></semantics></math>
+[that is, differentiate
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+times then multiply by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>x</mi><mi>i</mi></msup><annotation encoding="application/x-tex">x^i</annotation></semantics></math>]
+than to evaluate
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∂</mi><mi>k</mi></msup><msup><mi>x</mi><mi>l</mi></msup></mrow><annotation encoding="application/x-tex">\partial^kx^l</annotation></semantics></math>
+[that is, multiply by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>x</mi><mi>l</mi></msup><annotation encoding="application/x-tex">x^l</annotation></semantics></math>
+then differentiate
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+times] Converting a general word to standard form is not straightforward
+but we have</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∂</mi><msup><mi>x</mi><mi>n</mi></msup><mo>=</mo><msup><mi>x</mi><mi>n</mi></msup><mi>∂</mi><mo>+</mo><mi>n</mi><msup><mi>x</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\partial x^n = x^n\partial +  nx^{n-1}.</annotation></semantics></math></p>
+<p>(or, using functional notation,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>x</mi><mi>n</mi></msup><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mi>′</mi><mo>=</mo><msup><mi>x</mi><mi>n</mi></msup><mi>f</mi><mi>′</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mi>n</mi><msup><mi>x</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msup><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\left(x^nf(x)\right)'=x^nf'(x)+nx^{n-1}f(x)</annotation></semantics></math>).
+Noting that operator composition is associative, we may apply this rule
+recursively to find standard form for products
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>x</mi><mi>i</mi></msup><msup><mi>∂</mi><mi>j</mi></msup><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>x</mi><mi>l</mi></msup><msup><mi>∂</mi><mi>m</mi></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">(x^i\partial^j)(x^l\partial^m)</annotation></semantics></math>.
 Alternatively we may follow <span class="citation">Wolf (<a href="#ref-wolf1975">1975</a>)</span> and use the fact that</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>∂</mi><mi>i</mi></msup><msup><mi>x</mi><mi>j</mi></msup><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>∂</mi><mi>l</mi></msup><msup><mi>x</mi><mi>m</mi></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><munderover><mo>∑</mo><mrow><mi>r</mi><mo>=</mo><mn>0</mn></mrow><mi>j</mi></munderover><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>j</mi><mi>r</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>l</mi><mi>r</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><msup><mi>∂</mi><mrow><mi>i</mi><mo>+</mo><mi>l</mi><mo>−</mo><mi>r</mi></mrow></msup><msup><mi>x</mi><mrow><mi>j</mi><mo>+</mo><mi>m</mi><mo>−</mo><mi>r</mi></mrow></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">
-(\partial^i x^j)(\partial^lx^m)=
-\sum_{r=0}^j{j\choose r}{l\choose r}\partial^{i+l-r}x^{j+m-r}.</annotation></semantics></math></p>
-<p>These rules can be used to show that
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>7</mn><mi>∂</mi><mo>+</mo><mn>4</mn><mi>∂</mi><mi>x</mi><msup><mi>∂</mi><mn>3</mn></msup><mi>x</mi></mrow><annotation encoding="application/x-tex">7\partial + 4\partial
-x\partial^3 x</annotation></semantics></math> can be expressed as
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>7</mn><mi>∂</mi><mo>+</mo><mn>12</mn><mi>x</mi><msup><mi>∂</mi><mn>2</mn></msup><mo>+</mo><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup><mi>∂</mi><msup><mi>d</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">7\partial + 12x\partial^2 +
-4x^2\partial d^3</annotation></semantics></math>, which is in standard
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>x</mi><mi>i</mi></msup><msup><mi>∂</mi><mi>j</mi></msup><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>x</mi><mi>l</mi></msup><msup><mi>∂</mi><mi>m</mi></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><munderover><mo>∑</mo><mrow><mi>r</mi><mo>=</mo><mn>0</mn></mrow><mi>j</mi></munderover><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>j</mi><mi>r</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>l</mi><mi>r</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><msup><mi>x</mi><mrow><mi>i</mi><mo>+</mo><mi>l</mi><mo>−</mo><mi>r</mi></mrow></msup><msup><mi>∂</mi><mrow><mi>j</mi><mo>+</mo><mi>m</mi><mo>−</mo><mi>r</mi></mrow></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">
+(x^i\partial^j)(x^l\partial^m)=
+\sum_{r=0}^j{j\choose r}{l\choose r}x^{i+l-r}\partial^{j+m-r}.</annotation></semantics></math></p>
+<p>These rules can be used to show, for example, that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>7</mn><mi>∂</mi><mo>+</mo><mn>4</mn><mi>x</mi><msup><mi>∂</mi><mn>3</mn></msup><mi>x</mi></mrow><annotation encoding="application/x-tex">7\partial +
+4x\partial^3 x</annotation></semantics></math> can be expressed as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>7</mn><mi>∂</mi><mo>+</mo><mn>12</mn><mi>x</mi><msup><mi>∂</mi><mn>2</mn></msup><mo>+</mo><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup><msup><mi>∂</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">7\partial + 12x\partial^2 +
+4x^2\partial^3</annotation></semantics></math>, which is in standard
 form.</p>
 <div class="section level3">
 <h3 id="the-package-in-use">The package in use<a class="anchor" aria-label="anchor" href="#the-package-in-use"></a>
@@ -394,7 +404,7 @@ recurrence relation used. This defaults to
 <span><span class="co">##     }</span></span>
 <span><span class="co">##     spray(ind, val, addrepeats = TRUE)</span></span>
 <span><span class="co">## }</span></span>
-<span><span class="co">## &lt;bytecode: 0x55a6d1a5e0f8&gt;</span></span>
+<span><span class="co">## &lt;bytecode: 0x565000aa8238&gt;</span></span>
 <span><span class="co">## &lt;environment: namespace:weyl&gt;</span></span></code></pre>
 <p>Function <code><a href="../reference/Ops.html">weyl_prod_helper3()</a></code> follows Wolf. This gives
 the univariate concatenation product
