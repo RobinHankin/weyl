@@ -1,3 +1,8 @@
+# weyl 0.0-7
+
+- documentation improvements
+- code legibility improvements
+
 # weyl 0.0-6
 
 - rweyll() and rweylll()
