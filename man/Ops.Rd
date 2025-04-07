@@ -20,7 +20,7 @@
   Idiom such as \code{x^2 + y*z/5} should work as expected.  Addition
   and subtraction, and scalar multiplication, are the same as those of
   the \CRANpkg{spray} package; but \dQuote{\code{*}} is interpreted as
-  functional composition, and \dQuote{\code{^}} is interpreted as
+  operator composition, and \dQuote{\code{^}} is interpreted as
   repeated composition.  A number of helper functions are documented
   here (which are not designed for the end-user).
 
