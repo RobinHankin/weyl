@@ -40,31 +40,31 @@ as $7\partial + 4\partial x\partial^3 x$, which would map $f$ to $7f'
 + 4\left(x\left(xf\right)'''\right)'$.  It can be shown that any
 element of the Weyl algebra can be expressed in the standard form
 
-\[
-\sum_i a_i \partial^{p_i}x^{q_i}\]
+\[\sum_i a_i x^{q_i}\partial^{p_i}\]
 
-for real $a_i$ and nonnegative integers $p_i,q_i$.  Converting a
-general word to standard form is not straightforward but we have
-
-\[
-\partial x^n = x^n\partial +  nx^{n-1}\]
-
-and
+for real $a_i$ and nonnegative integers $p_i,q_i$.  Standard form is
+desirable operationally: it is a lot easier to evaluate
+$x^i\partial^j$ [that is, differentiate $j$ times then multiply by
+$x^i$] than to evaluate $\partial^kx^l$ [that is, multiply by $x^l$
+then differentiate $k$ times] Converting a general word to standard
+form is not straightforward but we have
 
 \[
-\partial^n x = x\partial^n +  n\partial^{n-1}.\]
+\partial x^n = x^n\partial +  nx^{n-1}.\]
 
-We can apply these rules recursively to find standard form for
-products $(\partial^i x^j)(\partial^l x^m)$.  Alternatively we may
-follow @wolf1975 and use the fact that
+(or, using functional notation,
+$\left(x^nf(x)\right)'=x^nf'(x)+nx^{n-1}f(x)$).  Noting that operator
+composition is associative, we may apply this rule recursively to find
+standard form for products $(x^i\partial^j)(x^l\partial^m)$.
+Alternatively we may follow @wolf1975 and use the fact that
 
 \[
-(\partial^i x^j)(\partial^lx^m)=
-\sum_{r=0}^j{j\choose r}{l\choose r}\partial^{i+l-r}x^{j+m-r}.\]
+(x^i\partial^j)(x^l\partial^m)=
+\sum_{r=0}^j{j\choose r}{l\choose r}x^{i+l-r}\partial^{j+m-r}.\]
 
-These rules can be used to show that $7\partial + 4\partial
-x\partial^3 x$ can be expressed as $7\partial + 12x\partial^2 +
-4x^2\partial d^3$, which is in standard form.
+These rules can be used to show, for example, that $7\partial +
+4x\partial^3 x$ can be expressed as $7\partial + 12x\partial^2 +
+4x^2\partial^3$, which is in standard form.
 
 ## The package in use
 
