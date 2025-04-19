@@ -238,9 +238,7 @@ systems’ results for
 <p><code>In[1] := D[D[x*D[x^2*f[x],x],x],x] // Expand</code></p>
 <p><code>Out[1] := 4 f[x] + 14 x f'[x] + 8 x^2 f''[x] + x^3f'''[x]</code></p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/weyl.html">weyl</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="va">D</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/weyl.html">weyl</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">0</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="va">x</span><span class="op">^</span><span class="fl">2</span><span class="op">*</span><span class="va">D</span><span class="op">*</span><span class="va">x</span><span class="op">*</span><span class="va">D</span><span class="op">^</span><span class="fl">2</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">d</span><span class="op">^</span><span class="fl">2</span> <span class="op">*</span> <span class="va">x</span> <span class="op">*</span> <span class="va">d</span> <span class="op">*</span> <span class="va">x</span><span class="op">^</span><span class="fl">2</span></span></code></pre></div>
 <pre><code><span><span class="co">## A member of the Weyl algebra:</span></span>
 <span><span class="co">## 4 +x^3*d^3 +8*x^2*d^2 +14*x*d</span></span></code></pre>
 <p>Above, we see agreement between <code>weyl</code> and Mathematica,
@@ -404,7 +402,7 @@ recurrence relation used. This defaults to
 <span><span class="co">##     }</span></span>
 <span><span class="co">##     spray(ind, val, addrepeats = TRUE)</span></span>
 <span><span class="co">## }</span></span>
-<span><span class="co">## &lt;bytecode: 0x565000aa8238&gt;</span></span>
+<span><span class="co">## &lt;bytecode: 0x5631dcab0f98&gt;</span></span>
 <span><span class="co">## &lt;environment: namespace:weyl&gt;</span></span></code></pre>
 <p>Function <code><a href="../reference/Ops.html">weyl_prod_helper3()</a></code> follows Wolf. This gives
 the univariate concatenation product
