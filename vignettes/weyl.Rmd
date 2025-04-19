@@ -131,9 +131,7 @@ systems' results for $\partial^2x\partial x^2$:
 `Out[1] := 4 f[x] + 14 x f'[x] + 8 x^2 f''[x] + x^3f'''[x]`
 
 ```{r}
-x <- weyl(cbind(0,1))
-D <- weyl(cbind(1,0))
-x^2*D*x*D^2
+d^2 * x * d * x^2
 ```
 
 Above, we see agreement between `weyl` and Mathematica, although the
