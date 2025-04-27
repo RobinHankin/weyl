@@ -31,14 +31,16 @@ grades(x)
 \details{
 
 Function \code{grades()} returns an (unordered) vector specifying the
-grades of the constituent terms.  Function \code{grades<-()} allows
-idiom such as \code{grade(x,1:2) <- 7} to operate as expected [here to
-set all coefficients of terms with grades 1 or 2 to value 7].
+grades of the constituent terms.  
 
-Function \code{grade(C,n)} returns a Weyl object with just the
+Function \code{grade(x,n)} returns a Weyl object with just the
 elements of grade \code{g}, where \code{g \%in\% n}.
 
-The zero grade term, \code{grade(C,0)}, is given more naturally by
+Function \code{grade<-()} allows idiom such as \code{grade(x,1:2) <- 7}
+to operate as expected [here to set all coefficients of terms with
+grades 1 or 2 to value 7].
+
+The zero grade term, \code{grade(x,0)}, is given more naturally by
 \code{constant(C)}.
 }
 \value{Integer vector or weyl object}
