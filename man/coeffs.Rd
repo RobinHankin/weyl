@@ -30,7 +30,7 @@ coeffs(S) <- value
 
 To access coefficients of a weyl object \code{S}, use
 \code{spray::coeffs(S)} [package idiom is \code{coeffs(S)}].  Similarly
-to access the index matrix use \code{index(s)}.
+to access the index matrix use \code{index(S)}.
 
 The replacement method is package-specific; use \code{coeffs(S)
 <-value}.
