@@ -5,9 +5,15 @@
 \alias{is.empty}
 \title{The zero operator}
 \description{
-The zero operator maps any function to the zero function (which maps
-anything to zero).  To test for being zero, use \code{spray::is.zero()};
-package idiom would be \code{is.zero()}. 
+
+  The zero operator maps any function to the zero function (which maps
+  anything to zero).  To test for something being zero, use
+  \code{spray::is.zero()}; package idiom would be \code{is.zero()}.
+
+  Function \code{zero()} takes a single argument which is interpreted as
+  the dimension of the result.  So \code{zero(dim(a))} returns
+  \code{a*0} (but is faster).
+  
 }
 \usage{zero(d)}
 \arguments{
@@ -23,6 +29,8 @@ is.zero(a-a)
 is.zero(a*0)
 
 a == a + zero(dim(a))
+
+zero(8)
 
 }
 
