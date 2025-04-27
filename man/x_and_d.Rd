@@ -29,7 +29,7 @@ x
 
 d^3 * x^4
 
-(1-d*x*d)*(x^2-d^3)
+(1 - d*x*d) * (x^2 - d^3)
 
 }
 \keyword{datasets}
