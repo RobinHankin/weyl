@@ -93,12 +93,13 @@ Coutinho calls this the symbol map."></head><body>
 
 
 <p>Function <code>grades()</code> returns an (unordered) vector specifying the
-grades of the constituent terms.  Function <code>grades&lt;-()</code> allows
-idiom such as <code>grade(x,1:2) &lt;- 7</code> to operate as expected [here to
-set all coefficients of terms with grades 1 or 2 to value 7].</p>
-<p>Function <code>grade(C,n)</code> returns a Weyl object with just the
+grades of the constituent terms.</p>
+<p>Function <code>grade(x,n)</code> returns a Weyl object with just the
 elements of grade <code>g</code>, where <code>g %in% n</code>.</p>
-<p>The zero grade term, <code>grade(C,0)</code>, is given more naturally by
+<p>Function <code>grade&lt;-()</code> allows idiom such as <code>grade(x,1:2) &lt;- 7</code>
+to operate as expected [here to set all coefficients of terms with
+grades 1 or 2 to value 7].</p>
+<p>The zero grade term, <code>grade(x,0)</code>, is given more naturally by
 <code>constant(C)</code>.</p>
     </div>
     <div class="section level2">
@@ -116,52 +117,54 @@ elements of grade <code>g</code>, where <code>g %in% n</code>.</p>
 <span class="r-in"><span><span class="va">a</span> <span class="op">&lt;-</span> <span class="fu"><a href="rweyl.html">rweyl</a></span><span class="op">(</span><span class="fl">30</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">grades</span><span class="op">(</span><span class="va">a</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> A disord object with hash d3e95ebc6f51951331de5094fe478d929ba9bdcd and elements</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 5 8 7 5 4 4 6 6 8 8 4 6 5 3 6 4 6 8 7 5 7 5 8 8 7 7 4 6 6 5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A disord object with hash 855dc61a835ab43c9cf74e9cf606df82d3ec4cda and elements</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 4 7 7 3 7 5 9 8 4 6 8 5 4 6 4 6 4 8 7 6 6 4 7 8 4 7 6 5 7 7</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> (in some order)</span>
 <span class="r-in"><span><span class="fu">grade</span><span class="op">(</span><span class="va">a</span>,<span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> A member of the Weyl algebra:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   x  y  z dx dy dz     val</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1  0  2  0  0  1  =   25</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1  0  0  0  1  1  =   24</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2  0  0  1  1  0  =    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2  1  1  0  0  0  =    7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1  0  0  0  2  1  =   22</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   0  1  1  1  1  0  =   11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  0  2  0  0  1  =   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  1  0  0  0  2  =   22</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2  0  1  0  0  1  =   20</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  0  0  0  2  1  =    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   0  0  2  2  0  0  =   18</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  0  0  0  1  1  =    9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   0  0  1  1  0  2  =   21</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2  0  1  1  0  0  =   30</span>
 <span class="r-in"><span><span class="fu">grade</span><span class="op">(</span><span class="va">a</span>,<span class="fl">5</span><span class="op">:</span><span class="fl">9</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="op">-</span><span class="fl">99</span></span></span>
 <span class="r-in"><span><span class="va">a</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> A member of the Weyl algebra:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   x  y  z dx dy dz     val</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1  0  1  1  2  1  =  -99</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2  1  1  2  1  1  =  -99</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2  1  1  0  0  0  =    7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   0  1  2  2  1  2  =  -99</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2  2  0  1  0  0  =  -99</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1  0  0  0  1  1  =   24</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2  0  0  2  0  1  =  -99</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2  0  2  0  1  2  =  -99</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1  2  2  1  2  0  =  -99</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1  0  0  0  2  1  =   22</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1  1  1  0  2  1  =  -99</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1  2  1  1  1  0  =  -99</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   0  1  1  1  1  0  =   11</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   0  2  0  1  0  2  =  -99</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   0  1  2  2  1  0  =  -99</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2  0  0  1  1  0  =    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2  2  0  1  1  0  =  -99</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2  2  1  1  1  1  =  -99</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   0  2  1  2  2  0  =  -99</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   0  0  2  2  1  0  =  -99</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   0  2  1  1  1  2  =  -99</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2  2  1  2  0  0  =  -99</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   1  1  0  2  1  0  =  -99</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   2  2  2  0  2  0  =  -99</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1  1  1  0  1  1  =  -99</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2  0  0  2  2  0  =  -99</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   0  1  1  1  2  1  =  -99</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2  1  1  1  1  0  =  -99</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   2  2  2  0  0  2  =  -99</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   0  0  2  2  0  0  =   18</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   1  0  1  2  1  2  =  -99</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  2  2  1  2  1  =  -99</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2  0  0  2  0  1  =  -99</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2  0  2  0  1  2  =  -99</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  0  0  0  1  1  =    9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   0  2  1  1  1  2  =  -99</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  0  0  0  2  1  =    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2  0  1  1  0  0  =   30</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  0  1  1  2  1  =  -99</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2  0  1  0  0  1  =   20</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   0  2  2  1  0  1  =  -99</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  1  0  0  0  2  =   22</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  2  2  1  0  2  =  -99</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  1  2  1  1  1  =  -99</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  2  1  1  1  0  =  -99</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  1  1  0  2  1  =  -99</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  0  2  0  0  1  =   10</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   1  2  0  2  1  1  =  -99</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1  0  2  0  0  1  =   25</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  1  1  2  1  2  =  -99</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   0  0  1  1  0  2  =   21</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2  0  1  0  2  2  =  -99</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  1  1  1  0  2  =  -99</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  1  1  0  1  1  =  -99</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2  1  2  2  0  0  =  -99</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
@@ -173,7 +176,7 @@ elements of grade <code>g</code>, where <code>g %in% n</code>.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
 </div>
 
     </footer></div>

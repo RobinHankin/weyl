@@ -66,7 +66,7 @@ disord objects."></head><body>
 
 <p>To access coefficients of a weyl object <code>S</code>, use
 <code>spray::coeffs(S)</code> [package idiom is <code>coeffs(S)</code>].  Similarly
-to access the index matrix use <code>index(s)</code>.</p>
+to access the index matrix use <code>index(S)</code>.</p>
 <p>The replacement method is package-specific; use <code>coeffs(S)
 &lt;-value</code>.</p>
     </div>
@@ -86,31 +86,31 @@ to access the index matrix use <code>index(s)</code>.</p>
 <span class="r-in"><span><span class="op">(</span><span class="va">a</span> <span class="op">&lt;-</span> <span class="fu"><a href="rweyl.html">rweyl</a></span><span class="op">(</span><span class="fl">9</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> A member of the Weyl algebra:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   x  y  z dx dy dz     val</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1  2  0  0  1  1  =    9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   0  2  1  0  2  1  =    8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   0  1  0  1  1  2  =    7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   0  0  1  2  2  0  =    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2  2  2  1  2  1  =    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2  2  0  0  0  2  =    3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1  1  1  1  0  1  =    4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2  2  1  2  1  1  =    2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1  1  0  1  2  2  =    1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  1  1  0  1  0  =    9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2  0  0  0  2  1  =    8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  2  0  0  1  1  =    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   0  2  1  0  2  1  =    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   0  1  0  1  1  2  =    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2  1  2  1  1  0  =    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  0  1  2  2  2  =    6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   0  0  1  2  2  0  =    2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2  2  2  1  2  1  =    1</span>
 <span class="r-in"><span><span class="fu">coeffs</span><span class="op">(</span><span class="va">a</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> A disord object with hash b718add1b991c5338effd09f1b672587009a4c6b and elements</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 9 8 7 6 5 3 4 2 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A disord object with hash fd862492195be038e15ac4d61a4f25ac847c6c9e and elements</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 9 8 5 4 3 7 6 2 1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> (in some order)</span>
 <span class="r-in"><span><span class="fu">coeffs</span><span class="op">(</span><span class="va">a</span><span class="op">)</span><span class="op">[</span><span class="fu">coeffs</span><span class="op">(</span><span class="va">a</span><span class="op">)</span><span class="op">&lt;</span><span class="fl">3</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fl">100</span></span></span>
 <span class="r-in"><span><span class="va">a</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   x  y  z dx dy dz     val</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1  1  0  1  2  2  =  100</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2  2  1  2  1  1  =  100</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1  1  1  1  0  1  =    4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2  2  0  0  0  2  =    3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2  2  2  1  2  1  =    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   0  0  1  2  2  0  =    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   0  1  0  1  1  2  =    7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   0  2  1  0  2  1  =    8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1  2  0  0  1  1  =    9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2  2  2  1  2  1  =  100</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   0  0  1  2  2  0  =  100</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  0  1  2  2  2  =    6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2  1  2  1  1  0  =    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   0  1  0  1  1  2  =    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   0  2  1  0  2  1  =    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  2  0  0  1  1  =    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2  0  0  0  2  1  =    8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1  1  1  0  1  0  =    9</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
@@ -122,7 +122,7 @@ to access the index matrix use <code>index(s)</code>.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
 </div>
 
     </footer></div>
