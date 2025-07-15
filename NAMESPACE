@@ -3,7 +3,9 @@ exportPattern("^[[:alpha:]]+")
 S3method(Ops,weyl)
 importFrom("disordR","elements")
 import("spray")
-import("methods")
+
+importFrom(methods, setOldClass)
+
 
 importFrom(disordR,disord)
 importFrom(disordR,hash)

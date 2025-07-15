@@ -2,7 +2,7 @@ Package: weyl
 Type: Package
 Title: The Weyl Algebra
 Version: 0.0-7
-Depends: methods, R (>= 4.1.0)
+Depends: R (>= 4.1.0)
 Authors@R: person(given=c("Robin", "K. S."), family="Hankin", role = c("aut","cre"), email="hankin.robin@gmail.com", comment = c(ORCID = "0000-0001-5982-0415"))
 Maintainer: Robin K. S. Hankin <hankin.robin@gmail.com>
 Description: A suite of routines for Weyl algebras.  Notation follows
@@ -15,6 +15,6 @@ License: GPL (>= 2)
 LazyData: yes
 Suggests: knitr,rmarkdown,testthat,covr
 VignetteBuilder: knitr
-Imports: disordR (>= 0.0-8), freealg (>= 1.0-4), spray (>= 1.0-27)
+Imports: disordR (>= 0.0-8), freealg (>= 1.0-4), spray (>= 1.0-27), methods
 URL: https://github.com/RobinHankin/weyl, https://robinhankin.github.io/weyl/
 BugReports: https://github.com/RobinHankin/weyl/issues
