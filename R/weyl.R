@@ -1,8 +1,7 @@
 `weyl` <- function(M){
     if(is.matrix(M)){M <- spray(M)}
     stopifnot(is.ok.weyl(M))
-    class(M) <- c("weyl","spray")
-    return(M)
+    return(structure(M, class = c("weyl","spray"))) # class weyl set only here
 }
 
 setOldClass("weyl")
