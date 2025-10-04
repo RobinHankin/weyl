@@ -7,13 +7,9 @@
 setOldClass("weyl")
 
 `is.ok.weyl` <- function(M){
-    if(!is.spray(M)){
-        return("need a spray")
-    } else if(arity(M)%%2 != 0){
-        return("arity must be even")
-    } else {
-        return(TRUE)
-    }
+    if(!is.spray(M)){stop("need a spray")}
+    if(arity(M)%%2 != 0){stop("arity must be even")}
+    return(TRUE)
 }
     
 `spray` <- function (M, x, addrepeats = FALSE){spray::spray(M,x,addrepeats=addrepeats)}
