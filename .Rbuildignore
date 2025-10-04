@@ -5,7 +5,9 @@
 ^inst/weyl_writing.png$
 ^inst/symb.R$
 ^inst/stirling.Rmd$
-
+^inst/weyl_arxiv.Rnw$
+^inst/weyl_tragula.Rnw$
+^inst/weyl.bib$
 
 ^vignettes/.Rhistory$
 ^vignettes/weyl.html$
