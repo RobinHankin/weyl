@@ -48,7 +48,7 @@ ED=\sum_{i,j}g_i\frac{\partial}{\partial x_i}\,f_i\frac{\partial}{\partial x_j}
 g_i\frac{\partial f_i}{\partial x_j}\,\frac{\partial}{\partial x_j}
 $$
 
-so $E$ and $E$ "nearly" commute, in the sense that $ED-DE$ is _first
+so $D$ and $E$ "nearly" commute, in the sense that $ED-DE$ is _first
 order_:
 
 $$DE-ED=
