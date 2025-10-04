@@ -120,7 +120,7 @@ These rules can be used to show, for example, that $7\partial +
 The above operators form part of the {\tt weyl} package, written in
 the R computing language~\citep{rcore2022}, which is available on CRAN
 at
-\url{https://CRAN.R-project.org/package=weyl}~\citep{hankin2022_weyl}.
+\url{https://CRAN.R-project.org/package=weyl}~\citep{hankin2022_weyl,hankin2022_weyl_arxiv}.
 The package includes functionality to automate the above calculations
 in an R-centric manner.  In particular, package idiom represents the
 generating elements $\partial$ and $x$ of the first Weyl algebra as R
