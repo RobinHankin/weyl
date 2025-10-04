@@ -1,3 +1,8 @@
+# weyl 0.0-8
+
+- tragularization
+
+
 # weyl 0.0-7
 
 - documentation improvements

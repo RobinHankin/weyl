@@ -118,9 +118,9 @@ These rules can be used to show, for example, that $7\partial +
 \subsection{The package in use}
 
 The above operators form part of the {\tt weyl} package, written in
-the R computing language~\citep{rcore2022}, which is available on CRAN
+the R computing language~\citep{rcore2022_tragula}, which is available on CRAN
 at
-\url{https://CRAN.R-project.org/package=weyl}~\citep{hankin2022_weyl,hankin2022_weyl_arxiv}.
+\url{https://CRAN.R-project.org/package=weyl}~\citep{hankin2022_weyl_tragula}.
 The package includes functionality to automate the above calculations
 in an R-centric manner.  In particular, package idiom represents the
 generating elements $\partial$ and $x$ of the first Weyl algebra as R
@@ -414,15 +414,15 @@ discipline]{Computational implementation and notes on {\tt disordR}
 discipline}
 
 The package stores {\tt weyl} objects using the {\tt
-spray}~\citep{hankin2022_spray_arxiv} class for sparse arrays.
+spray}~\citep{hankin2022_spray_arxiv_tragula} class for sparse arrays.
 Addition is inherited from {\tt spray}; multiplication is specific to
 the {\tt weyl} package.  Thus the coefficients of a {\tt weyl} object,
 and the rows of its index matrix, are stored in an
 implementation-specific order.  Extraction and replacement use {\tt
-disordR} discipline~\citep{hankin2022_disordR_arxiv}.  A short example
+disordR} discipline~\citep{hankin2022_disordR_arxiv_tragula}.  A short example
 follows in the context of the {\tt weyl} package; much more extensive
 and detailed discussions are given
-by~\cite{hankin2022_disordR_arxiv,hankin2022_mvp_arxiv}.
+by~\cite{hankin2022_disordR_arxiv_tragula,hankin2022_mvp_arxiv_tragula}.
 
 
 \subsection{An illustrative session}
