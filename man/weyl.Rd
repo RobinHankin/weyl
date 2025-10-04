@@ -38,6 +38,6 @@ weyl(W)
 as.weyl(15,d=3)
 
 is.ok.weyl(spray(matrix(1:30,5,6)))
-is.ok.weyl(spray(matrix(1:30,6,5)))
+\dontrun{is.ok.weyl(spray(matrix(1:30,6,5)))}
 
 }
