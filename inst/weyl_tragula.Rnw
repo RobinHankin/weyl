@@ -1,4 +1,5 @@
-\documentclass[nojss]{jss}  
+% -*- mode: noweb; noweb-default-code-mode: R-mode; -*-
+\documentclass[article]{tragula}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{graphicx}
@@ -44,14 +45,13 @@ on CRAN at \url{https://CRAN.R-project.org/package=weyl}.
 \Year{0000}
 \Submitdate{0000-00-00}
 \Acceptdate{0000-00-00}
-%% \Repository{https://github.com/RobinHankin/weyl} %% this line for Tragula
-
+\Repository{https://github.com/RobinHankin/weyl} %% this line for Tragula
 
 \Address{
-Robin K. S. Hankin\\%\orcid{https://orcid.org/0000-0001-5982-0415}\\
+Robin K. S. Hankin\\
 University of Stirling\\
 Scotland\\
-E-mail: \email{hankin.robin@gmail.com}
+email: \email{hankin.robin@gmail.com}
 }
 
 %% need no \usepackage{Sweave.sty}
