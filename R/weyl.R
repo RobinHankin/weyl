@@ -14,7 +14,7 @@ setOldClass("weyl")
     
 `spray` <- function (M, x, addrepeats = FALSE){spray::spray(M,x,addrepeats=addrepeats)}
                     
-`is.weyl` <- function(M){inherits(M," weyl")}
+`is.weyl` <- function(M){inherits(M, "weyl")}
 `as.weyl` <- function(val, d){
     if(is.weyl(val) | is.spray(val)){
         out <- val
