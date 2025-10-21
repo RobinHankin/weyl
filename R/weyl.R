@@ -14,12 +14,12 @@ setOldClass("weyl")
     
 `spray` <- function (M, x, addrepeats = FALSE){spray::spray(M,x,addrepeats=addrepeats)}
                     
-`is.weyl` <- function(M){inherits(M,"weyl")}
-`as.weyl` <- function(val,d){
+`is.weyl` <- function(M){inherits(M," weyl")}
+`as.weyl` <- function(val, d){
     if(is.weyl(val) | is.spray(val)){
         out <- val
     } else if(is.matrix(val)){
-        out <- spray(val,d)
+        out <- spray(val, d)
     } else if(is.numeric(val)){
         return(val*idweyl(d))
     } else {

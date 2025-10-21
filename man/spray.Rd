@@ -5,7 +5,7 @@
   \code{weyl()} coerces a spray object to a  Weyl object.
 }
 \usage{
-spray(M,x,addrepeats=FALSE)
+spray(M, x, addrepeats=FALSE)
 }
 \arguments{
   \item{M}{An integer-valued matrix, the index of the weyl object}
@@ -21,8 +21,8 @@ spray(M,x,addrepeats=FALSE)
 \author{Robin K. S. Hankin}
 \examples{
 
-(W <- spray(matrix(1:36,6,6),1:6))
+(W <- spray(matrix(1:36,6,6), 1:6))
 weyl(W)
 
-as.weyl(15,d=3)
+as.weyl(15, d=3)
 }

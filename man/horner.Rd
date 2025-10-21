@@ -28,8 +28,8 @@ multiplications and \eqn{n} additions, and this is optimal.
 \author{Robin K. S. Hankin}
 \seealso{\code{\link{ooom}}}
 \examples{
-horner(x,1:5)
-horner(x+d,1:3)
+horner(x, 1:5)
+horner(x+d, 1:3)
 
 2+x+d |> horner(1:3) |> horner(1:2)
 

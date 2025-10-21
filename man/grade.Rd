@@ -17,11 +17,11 @@
 }
 \usage{
 grade(C, n, drop=TRUE)
-grade(C,n) <- value
+grade(C, n) <- value
 grades(x)
 }
 \arguments{
-  \item{C,x}{Weyl object}
+  \item{C, x}{Weyl object}
   \item{n}{Integer vector specifying grades to extract}
   \item{value}{Replacement value, a numeric vector}
   \item{drop}{Boolean, with default \code{TRUE} meaning to coerce a
@@ -50,7 +50,7 @@ The zero grade term, \code{grade(x,0)}, is given more naturally by
 a <- rweyl(30)
 
 grades(a)
-grade(a,1:4)
-grade(a,5:9) <- -99
+grade(a, 1:4)
+grade(a, 5:9) <- -99
 a
 }

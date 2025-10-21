@@ -28,13 +28,13 @@ The \code{constant.weyl()} function is somewhat awkward because it has
   \code{drop=FALSE}. 
 }
 \examples{
-(a <- rweyl()+700)
+(a <- rweyl() + 700)
 constant(a)
-constant(a,drop=FALSE)
+constant(a, drop=FALSE)
 
 constant(a) <- 0
 constant(a)
-constant(a,drop=FALSE)
+constant(a, drop=FALSE)
 
-constant(a+66) == constant(a) + 66
+constant(a + 66) == constant(a) + 66
 }

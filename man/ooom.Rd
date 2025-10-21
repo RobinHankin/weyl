@@ -5,7 +5,7 @@
   Uses Taylor's theorem to give one over one minus a Weyl object
   }
 \usage{
-ooom(W,n)
+ooom(W, n)
 }
 \arguments{
   \item{W}{Weyl object}
@@ -15,9 +15,9 @@ ooom(W,n)
 \author{Robin K. S. Hankin}
 \seealso{\code{\link{horner}}}
 \examples{
-ooom(x+d,4)
+ooom(x+d, 4)
 
-W <- x+x*d
-ooom(W,4)*(1-W) == 1-W^5
+W <- x + x*d
+ooom(W, 4)*(1-W) == 1-W^5
 
 }

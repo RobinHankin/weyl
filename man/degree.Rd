@@ -40,7 +40,7 @@ d2 <- rweyl(n=2)
 
 deg(d1+d2) <= deg(d1) + deg(d2)
 deg(d1*d2) == deg(d1) + deg(d2)
-deg(d1*d2-d2*d1) <= deg(d1) + deg(d2) -2
+deg(d1*d2 - d2*d1) <= deg(d1) + deg(d2) -2
 
 }
 

@@ -18,5 +18,5 @@ drop(a)
 
 drop(idweyl(9))
 
-drop(constant(a,drop=FALSE))
+drop(constant(a, drop=FALSE))
 }
