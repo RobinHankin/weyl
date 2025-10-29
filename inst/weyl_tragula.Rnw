@@ -13,7 +13,7 @@
 
 %% just as usual
 \author{Robin K. S. Hankin}
-\title{Quantum algebra in R: the weyl package}
+\title{Quantum algebra in \proglang{R}: the \pkg{weyl} package}
 
 \Shorttitle{The \pkg{weyl} package}
 
