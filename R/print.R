@@ -1,3 +1,4 @@
+#' @export
 `print.weyl` <- function(x,...){
     cat("A member of the Weyl algebra:\n")
     wv <- getOption("weylvars")   # typically c("x","y","z")

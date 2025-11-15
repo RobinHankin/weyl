@@ -1,9 +1,11 @@
+#' @export
 `weyl_prod_helper1` <- function(a,b,c,d){
     if(c==0){return(spray(cbind(a,b+d)))}
     if(b==0){return(spray(cbind(a+c,d)))}
     return(Recall(a,b-1,c,d+1) + c*Recall(a,b-1,c-1,d))
 }
 
+#' @export
 `weyl_prod_helper2` <- function(a,b,c,d){
     f <- function(r){spray(cbind(a+c-r,b+d-r),factorial(r)*choose(b,r)*choose(c,r))}
     out <- 0
@@ -11,6 +13,7 @@
     return(out)
 }
 
+#' @export
 `weyl_prod_helper3` <- function(a,b,c,d){
     f <- function(r){factorial(r)*choose(b,r)*choose(c,r)}
     ind <- numeric(0)
@@ -22,6 +25,7 @@
     spray(ind,val,addrepeats=TRUE)
 }
     
+#' @export
 `weyl_prod_univariate_onerow` <- function(S1,S2,func){
                                         # (S1,S2 are spray objects)
                                         # univariate Weyl product; but
@@ -39,6 +43,7 @@
     ) * coeffs(S1)*coeffs(S2))
 }
 
+#' @export
 `weyl_prod_univariate_nrow` <- function(S1,S2){
                                         # univariate Weyl product;
                                         # here S1 and S2 may have
@@ -66,6 +71,7 @@
     return(out)
 }
 
+#' @export
 `weyl_prod_multivariate_onerow_singlecolumn` <- function(S1,S2,column){
  # multivariate but S1 and S2
  # must have only one row
@@ -84,6 +90,7 @@
     )
 }
 
+#' @export
 `weyl_prod_multivariate_onerow_allcolumns` <- function(S1,S2){
     stopifnot(nterms(S1)==1)
     stopifnot(nterms(S2)==1)
@@ -112,6 +119,7 @@
     
 }
 
+#' @export
 `weyl_prod_multivariate_nrow_allcolumns`  <- function(S1,S2){
     out <- 0
 
@@ -133,6 +141,7 @@
     return(out)
 }
 
+#' @export
 `weyl_power_scalar` <- function(S,n){
   stopifnot(n==round(n))
   if(n<0){stop("use ooom() for negative powers")}

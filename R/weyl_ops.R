@@ -1,3 +1,4 @@
+#' @export
 "Ops.weyl" <- function (e1, e2 = NULL) 
 {
     unary <- nargs() == 1

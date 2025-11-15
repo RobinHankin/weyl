@@ -18,3 +18,5 @@ VignetteBuilder: knitr
 Imports: disordR (>= 0.0-8), freealg (>= 1.0-4), spray (>= 1.0-27), methods
 URL: https://github.com/RobinHankin/weyl, https://robinhankin.github.io/weyl/
 BugReports: https://github.com/RobinHankin/weyl/issues
+RoxygenNote: 7.3.3
+Encoding: UTF-8

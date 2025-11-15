@@ -1,3 +1,4 @@
+#' @export
 `grades` <- function(x){  #special dispensation for the zero clifford object
     if(is.zero(x)){
         out <- numeric(0)
@@ -7,6 +8,7 @@
     return(out)
 }
 
+#' @export
 `grade` <- function(C,n,drop=TRUE){
     g <- elements(grades(C))
     wanted <- g %in% n
@@ -19,6 +21,7 @@
     return(out)
 }
 
+#' @export
 `grade<-` <- function(C,n,value){
     coeffs(C)[grades(C) %in% n] <- value
     return(C)
