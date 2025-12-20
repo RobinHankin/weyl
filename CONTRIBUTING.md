@@ -1,0 +1,16 @@
+# Contributing to weyl
+
+Thank you for considering contributing to `weyl`! I appreciate your
+interest in making this project better. Please read and adhere to the
+[Code of Conduct](https://robinhankin.github.io/weyl/CODE_OF_CONDUCT.md)
+to maintain a safe, welcoming, and inclusive environment. Various forms
+of contributions are welcome:
+
+- **Bug Reports**: Feel free to report any bugs you encounter.
+- **Documentation**: Typos, clarity issues, or missing guides: your help
+  is welcome here.
+- **Use cases**: if you use `weyl`, tell me about it! I want to know how
+  the software is being used!
+- **Feature Discussions/Requests**: Got an idea? Open an issue to
+  discuss its potential.
+- **Code Contributions**: All code contributions are welcome.
