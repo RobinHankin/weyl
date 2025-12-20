@@ -2,7 +2,7 @@
 \docType{class}
 \alias{weyl-class}
 \title{Class \dQuote{weyl}}
-\description{The formal S4 class for weyls.}
+\description{The formal \proglang{S4} class for weyls.}
 \section{Objects from the Class}{
 
 Objects \emph{can} be created by calls of the form \code{new("weyl",
