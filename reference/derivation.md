@@ -33,15 +33,15 @@ Robin K. S. Hankin
 (o <- rweyl(n=2,d=2))
 #> A member of the Weyl algebra:
 #>   x  y dx dy     val
-#>   0  1  0  0  =    2
-#>   1  2  1  1  =    1
+#>   2  0  2  2  =    2
+#>   0  2  1  2  =    1
 (f <- as.der(o))
 #> function (x) 
 #> {
 #>     S * x - x * S
 #> }
-#> <bytecode: 0x55c91985f250>
-#> <environment: 0x55c91985ee60>
+#> <bytecode: 0x557162a10830>
+#> <environment: 0x557162a10440>
 
 d1 <-rweyl(n=1,d=2)
 d2 <-rweyl(n=2,d=2)

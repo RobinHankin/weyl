@@ -39,10 +39,10 @@ a <- rweyl() + 67
 drop(a)
 #> A member of the Weyl algebra:
 #>   x  y  z dx dy dz     val
-#>   0  1  2  2  0  0  =    2
+#>   2  2  2  2  0  1  =    3
+#>   0  2  2  1  1  1  =    2
+#>   0  2  1  2  1  0  =    1
 #>   0  0  0  0  0  0  =   67
-#>   0  0  0  2  0  1  =    3
-#>   1  1  0  2  2  0  =    1
 
 drop(idweyl(9))
 #> [1] 1

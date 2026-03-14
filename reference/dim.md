@@ -38,9 +38,9 @@ Robin K. S. Hankin
 (a <- rweyl())
 #> A member of the Weyl algebra:
 #>   x  y  z dx dy dz     val
-#>   0  0  0  0  2  0  =    3
-#>   0  2  2  1  0  0  =    2
-#>   2  2  1  0  2  2  =    1
+#>   1  2  1  0  0  0  =    3
+#>   1  0  0  0  2  2  =    2
+#>   1  0  1  2  2  1  =    1
 dim(a)
 #> [1] 3
 ```

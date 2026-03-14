@@ -33,9 +33,9 @@ A weyl object corresponding to the zero operator (or a Boolean for
 (a <- rweyl(d=5))
 #> A member of the Weyl algebra:
 #>   1  2  3  4  5 d1 d2 d3 d4 d5     val
-#>   0  1  0  0  0  1  2  2  2  1  =    3
-#>   1  0  1  1  0  1  2  2  1  1  =    2
-#>   1  1  2  2  1  0  0  2  0  1  =    1
+#>   0  1  1  1  2  1  0  1  1  1  =    3
+#>   1  2  2  0  1  0  1  0  0  0  =    2
+#>   1  2  2  1  2  2  1  2  2  1  =    1
 is.zero(a)
 #> [1] FALSE
 is.zero(a-a)

@@ -88,11 +88,11 @@ a <- rweyl()
 print(a)
 #> A member of the Weyl algebra:
 #>   x  y  z dx dy dz     val
-#>   0  0  0  1  0  1  =    3
-#>   0  2  0  1  0  0  =    2
-#>   2  0  1  1  2  1  =    1
+#>   0  1  0  0  1  1  =    3
+#>   2  1  2  0  0  1  =    2
+#>   2  2  1  0  0  2  =    1
 options(polyform=TRUE)
 print(a)
 #> A member of the Weyl algebra:
-#> +3*dx*dz +2*y^2*dx +x^2*z*dx*dy^2*dz
+#> +3*y*dy*dz +2*x^2*y*z^2*dz +x^2*y^2*z*dz^2
 ```
