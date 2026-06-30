@@ -45,7 +45,8 @@ on CRAN at \url{https://CRAN.R-project.org/package=weyl}.
 \Year{0000}
 \Submitdate{0000-00-00}
 \Acceptdate{0000-00-00}
-\Repository{https://github.com/RobinHankin/weyl} %% this line for Tragula
+\Repository{https://github.com/RobinHankin/weyl}
+\DOI{10.5555/12345678}
 
 \Address{
 Robin K. S. Hankin\\
