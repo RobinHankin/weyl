@@ -14,6 +14,7 @@
 \alias{[,dot,missing,ANY-method}
 \alias{[,dot,missing,missing-method}
 \alias{[,dot,matrix,matrix-method}
+\alias{[,dot,function,function-method}
 \title{Class \dQuote{dot}}
 \description{
 
@@ -29,10 +30,19 @@
   context.
 
 }
+\usage{
+\S4method{[}{dot,missing,missing}(x, i, j, drop)
+\S4method{[}{dot,ANY,missing}(x, i, j, drop)
+\S4method{[}{dot,missing,ANY}(x, i, j, drop)
+\S4method{[}{dot,matrix,matrix}(x, i, j, drop)
+\S4method{[}{dot,ANY,ANY}(x, i, j, drop)
+\S4method{[}{dot,function,function}(x, i, j, drop)
+}
 \arguments{
-  \item{x}{Object of any class}
-  \item{i,j}{elements to commute}
-  \item{...}{Further arguments to \code{dot_error()}, currently ignored}
+  \item{x}{An object of class \code{dot} (typically the
+       pre-built object \dQuote{\code{.}})}
+  \item{i, j}{Elements to commute}
+  \item{drop}{Logical; passed to \code{drop()} in the default method}
 }
 \value{
   Always returns an object of the same class as \code{xy}.
