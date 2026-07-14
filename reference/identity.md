@@ -34,6 +34,7 @@ know whether to create a `spray` or a `weyl` object.
 ## Examples
 
 ``` r
+
 idweyl(7)
 #> A member of the Weyl algebra:
 #>   1  2  3  4  5  6  7 d1 d2 d3 d4 d5 d6 d7     val

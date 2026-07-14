@@ -30,6 +30,7 @@ Robin K. S. Hankin
 ## Examples
 
 ``` r
+
 (o <- rweyl(n=2,d=2))
 #> A member of the Weyl algebra:
 #>   x  y dx dy     val
@@ -40,8 +41,8 @@ Robin K. S. Hankin
 #> {
 #>     S * x - x * S
 #> }
-#> <bytecode: 0x557162a10830>
-#> <environment: 0x557162a10440>
+#> <bytecode: 0x55b497019d48>
+#> <environment: 0x55b497019958>
 
 d1 <-rweyl(n=1,d=2)
 d2 <-rweyl(n=2,d=2)

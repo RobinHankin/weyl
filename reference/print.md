@@ -29,6 +29,7 @@ matrix form or polynomial form: as in the
 governs dispatch to either `print_spray_polyform()` or
 `print_spray_matrixform()`.
 
+
     > a <- rweyl()
     > a    # default print method
     A member of the Weyl algebra:
@@ -46,6 +47,7 @@ Irrespective of the value of `polyform`, option `weylvars` controls the
 variable names. If `NULL` (the default), then sensible values are used:
 either `[xyz]` if the dimension is three or less, or integers. But
 option `weylvars` is user-settable:
+
 
     > options(weylvars=letters[18:20])
     > a

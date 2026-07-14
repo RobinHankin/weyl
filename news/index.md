@@ -2,6 +2,8 @@
 
 ## weyl 0.0-8
 
+CRAN release: 2026-07-13
+
 - tragularization
 
 ## weyl 0.0-7

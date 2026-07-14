@@ -40,6 +40,7 @@ The degree of the zero object is conventionally \\-\infty\\.
 ## Examples
 
 ``` r
+
 (a <- rweyl())
 #> A member of the Weyl algebra:
 #>   x  y  z dx dy dz     val

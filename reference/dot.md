@@ -9,19 +9,38 @@ creates file `dot.rda` which resides in the `data/` directory.
 
 The `borcherds` vignette discusses this in a more general context.
 
+## Usage
+
+``` r
+# S4 method for class 'dot,missing,missing'
+x[i, j, drop]
+# S4 method for class 'dot,ANY,missing'
+x[i, j, drop]
+# S4 method for class 'dot,missing,ANY'
+x[i, j, drop]
+# S4 method for class 'dot,matrix,matrix'
+x[i, j, drop]
+# S4 method for class 'dot,ANY,ANY'
+x[i, j, drop]
+# S4 method for class 'dot,function,function'
+x[i, j, drop]
+```
+
 ## Arguments
 
 - x:
 
-  Object of any class
+  An object of class `dot` (typically the pre-built object “`.`”)
 
-- i,j:
+- i, j:
 
-  elements to commute
+  Elements to commute
 
-- ...:
+- drop:
 
-  Further arguments to `dot_error()`, currently ignored
+  Logical; passed to
+  [`drop()`](https://robinhankin.github.io/weyl/reference/drop.md) in
+  the default method
 
 ## Value
 

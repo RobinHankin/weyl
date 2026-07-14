@@ -64,8 +64,8 @@ horner(x+d, 1:3)
 2+x+d |> horner(1:3) |> horner(1:2)
 #> A member of the Weyl algebra:
 #>  x d     val
-#>  1 0  =    1
-#>  0 0  =    5
-#>  0 1  =    4
 #>  0 2  =    6
+#>  0 1  =    4
+#>  0 0  =    5
+#>  1 0  =    1
 ```

@@ -45,6 +45,7 @@ Robin K. S. Hankin
 ## Examples
 
 ``` r
+
 (W <- spray(matrix(1:36,6,6),1:6))
 #>   x  y  z dx dy dz     val
 #>   6 12 18 24 30 36  =    6

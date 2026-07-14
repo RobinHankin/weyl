@@ -62,6 +62,7 @@ Robin K. S. Hankin
 ## Examples
 
 ``` r
+
 a <- rweyl(30)
 
 grades(a)

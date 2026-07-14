@@ -10,25 +10,42 @@ operators do not commute, but their commutator is itself first-order; he
 says that they “almost” commute. Here I demonstrate Borcherds’s
 observations in the context of the `weyl` package. Symbolically, if
 
-$$D = \sum f_{i}\left( x_{1},\ldots,x_{n} \right)\frac{\partial}{\partial x_{i}}\qquad E = \sum g_{i}\left( x_{1},\ldots,x_{n} \right)\frac{\partial}{\partial x_{i}}$$
+``` math
+D=\sum f_i\left(x_1,\dots,x_n\right)\frac{\partial}{\partial x_i}\qquad
+E=\sum g_i\left(x_1,\dots,x_n\right)\frac{\partial}{\partial x_i}
+```
 
-where $f_{i} = f_{i}\left( x_{1},\ldots,x_{n} \right)$ and
-$g_{i} = g_{i}\left( x_{1},\ldots,x_{n} \right)$ are functions, then
+where $`f_i=f_i\left(x_1,\dots,x_n\right)`$ and
+$`g_i=g_i\left(x_1,\dots,x_n\right)`$ are functions, then
 
-$$DE = \sum\limits_{i,j}f_{i}\frac{\partial}{\partial x_{i}}\, g_{i}\frac{\partial}{\partial x_{j}} = \sum\limits_{i,j}f_{i}g_{j}\frac{\partial}{\partial x_{i}}\frac{\partial}{\partial x_{j}} + f_{i}\frac{\partial g_{j}}{\partial x_{i}}\,\frac{\partial}{\partial x_{j}}$$
+``` math
+DE=\sum_{i,j}f_i\frac{\partial}{\partial x_i}\,g_i\frac{\partial}{\partial x_j}
+=\sum_{i,j}f_ig_j\frac{\partial}{\partial x_i}\frac{\partial}{\partial x_j} +
+f_i\frac{\partial g_j}{\partial x_i}\,\frac{\partial}{\partial x_j}
+```
 
-$$ED = \sum\limits_{i,j}g_{i}\frac{\partial}{\partial x_{i}}\, f_{i}\frac{\partial}{\partial x_{j}} = \sum\limits_{i,j}g_{i}f_{j}\frac{\partial}{\partial x_{j}}\frac{\partial}{\partial x_{i}} + g_{i}\frac{\partial f_{i}}{\partial x_{j}}\,\frac{\partial}{\partial x_{j}}$$
+``` math
+ED=\sum_{i,j}g_i\frac{\partial}{\partial x_i}\,f_i\frac{\partial}{\partial x_j}
+=\sum_{i,j}g_if_j\frac{\partial}{\partial x_j}\frac{\partial}{\partial x_i} +
+g_i\frac{\partial f_i}{\partial x_j}\,\frac{\partial}{\partial x_j}
+```
 
-so $D$ and $E$ “nearly” commute, in the sense that $ED - DE$ is *first
-order*:
+so $`D`$ and $`E`$ “nearly” commute, in the sense that $`ED-DE`$ is
+*first order*:
 
-$$DE - ED = \sum\limits_{i,j}f_{i}\frac{\partial g_{j}}{\partial x_{i}}\,\frac{\partial}{\partial x_{j}} - g_{i}\frac{\partial f_{i}}{\partial x_{j}}\,\frac{\partial}{\partial x_{j}}$$
+``` math
+DE-ED=
+\sum_{i,j}f_i\frac{\partial g_j}{\partial x_i}\,\frac{\partial}{\partial
+x_j}-g_i\frac{\partial f_i}{\partial x_j}\,\frac{\partial}{\partial
+x_j}
+```
 
 Above we have used the fact that partial derivatives commute, which
 leads to the cancellation of the second-order terms. We can verify this
 using the `weyl` package:
 
 ``` r
+
 D <- weyl(spray(cbind(matrix(sample(8),4,2),kronecker(diag(2),c(1,1))),1:4))
 E <- weyl(spray(cbind(matrix(sample(8),4,2),kronecker(diag(2),c(1,1))),1:4))
 F <- weyl(spray(cbind(matrix(sample(8),4,2),kronecker(diag(2),c(1,1))),1:4))
@@ -42,14 +59,19 @@ D
     ##   1  5  1  0  =    2
     ##   6  2  1  0  =    1
 
-($E$ and $F$ are similar). Symbolically we would have
+($`E`$ and $`F`$ are similar). Symbolically we would have
 
-$$D = \left( x^{6}y^{2} + 2xy^{5} \right)\frac{\partial}{\partial x} + \left( 4x^{7}y^{8} + 3x^{4}y^{3} \right)\frac{\partial}{\partial y}.$$
+``` math
+D=
+\left( x^6y^2 + 2xy^5\right)\frac{\partial}{\partial x}+
+\left(4x^7y^8 + 3x^4y^3\right)\frac{\partial}{\partial y}.
+```
 
-The package allows us to compose $E$ and $D$, although the result is
+The package allows us to compose $`E`$ and $`D`$, although the result is
 quite complicated:
 
 ``` r
+
 summary(E*D)
 ```
 
@@ -71,10 +93,11 @@ summary(E*D)
     ##  10  4  1  1  =    3
     ##  12  3  2  0  =    1
 
-However, the Lie bracket, $ED - DE$, (`.[E,D]` in package idiom) is
+However, the Lie bracket, $`ED-DE`$, (`.[E,D]` in package idiom) is
 indeed first order:
 
 ``` r
+
 .[E,D]
 ```
 
@@ -101,11 +124,12 @@ indeed first order:
     ##  10 12  0  1  =   36
 
 Above, looking at the `dx` and `dy` columns, we see that each row is
-either `1 0` or `0 1`, corresponding to either $\partial/\partial x$ or
-$\partial/\partial y$ respectively. Arguably this is easier to see with
-the other print method:
+either `1 0` or `0 1`, corresponding to either $`\partial/\partial x`$
+or $`\partial/\partial y`$ respectively. Arguably this is easier to see
+with the other print method:
 
 ``` r
+
 options(polyform = TRUE)
 .[E,D]
 ```
@@ -118,24 +142,27 @@ options(polyform = TRUE)
     ## -34*x^6*y^6*dx +12*x^9*y^4*dy +36*x^10*y^12*dy
 
 ``` r
+
 options(polyform = FALSE) # revert to default
 ```
 
 We may verify Jacobi’s identity:
 
 ``` r
+
 .[D,.[E,F]] + .[F,.[D,E]] + .[E,.[F,D]]
 ```
 
     ## A member of the Weyl algebra:
     ## empty sparse array with 4 columns
 
-Borcherds goes on to consider the special case where the $f_{i}$ and
-$g_{i}$ are constant. In this case the operators commute (by repeated
+Borcherds goes on to consider the special case where the $`f_i`$ and
+$`g_i`$ are constant. In this case the operators commute (by repeated
 application of Schwarz’s theorem) and so their Lie bracket is
 identically zero. We can create constant operators easily:
 
 ``` r
+
 (D <- as.weyl(spray(cbind(matrix(0,3,3),matrix(c(0,1,0,1,0,0,0,0,1),3,3,byrow=T)),1:3)))
 ```
 
@@ -146,6 +173,7 @@ identically zero. We can create constant operators easily:
     ##   0  0  0  0  1  0  =    1
 
 ``` r
+
 (E <- as.weyl(spray(cbind(matrix(0,3,3),matrix(c(0,1,0,1,0,0,0,0,1),3,3,byrow=T)),5:7)))
 ```
 
@@ -157,17 +185,17 @@ identically zero. We can create constant operators easily:
 
 (above, see how the first three columns of the index matrix are zero,
 corresponding to constant coefficients of the differential operator;
-symbolically
-$D = 2\frac{\partial}{\partial x} + \frac{\partial}{\partial y} + 3\frac{\partial}{\partial z}$
-and
-$E = 6\frac{\partial}{\partial x} + 5\frac{\partial}{\partial y} + 7\frac{\partial}{\partial z}$.
-And indeed, their Lie bracket vanishes:
+symbolically $`D=2\frac{\partial}{\partial x}+\frac{\partial}{\partial
+y}+3\frac{\partial}{\partial z}`$ and $`E=6\frac{\partial}{\partial
+x}+5\frac{\partial}{\partial y}+7\frac{\partial}{\partial z}`$. And
+indeed, their Lie bracket vanishes:
 
 ``` r
+
 .[D,E]
 ```
 
     ## [1] 0
 
-Hankin, R. K. S. 2022. “Quantum Algebra in R: The Weyl Package.” arXiv.
+Hankin, R. K. S. 2022. *Quantum Algebra in R: The Weyl Package*. arXiv.
 <https://doi.org/10.48550/ARXIV.2212.09230>.

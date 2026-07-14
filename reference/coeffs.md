@@ -39,6 +39,7 @@ Robin K. S. Hankin
 ## Examples
 
 ``` r
+
 (a <- rweyl(9))
 #> A member of the Weyl algebra:
 #>   x  y  z dx dy dz     val
