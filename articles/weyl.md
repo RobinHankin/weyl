@@ -350,7 +350,7 @@ weyl_prod_helper3
     ##     }
     ##     spray(ind, val, addrepeats = TRUE)
     ## }
-    ## <bytecode: 0x55cb894c6bc0>
+    ## <bytecode: 0x56499da4dbc0>
     ## <environment: namespace:weyl>
 
 Function
