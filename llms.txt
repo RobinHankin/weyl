@@ -1,6 +1,6 @@
 # Weyl algebra in R
 
-![](reference/figures/weyl.png)
+![](reference/figures/logo.png)
 
 To cite the `weyl` package in publications please use Hankin 2022. The
 `weyl` package provides R-centric functionality for working with Weyl

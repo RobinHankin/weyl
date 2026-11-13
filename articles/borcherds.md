@@ -1,6 +1,6 @@
 # Lie algebras and differential operators
 
-![](../../../_temp/Library/weyl/help/figures/weyl.png)
+![](../../../_temp/Library/weyl/help/figures/logo.png)
 
 To cite this work or the `weyl` package in publications please use
 Hankin (2022). In a very nice [youtube

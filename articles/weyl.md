@@ -1,6 +1,6 @@
 # Quantum algebra with R: the weyl package
 
-![](../../../_temp/Library/weyl/help/figures/weyl.png)
+![](../../../_temp/Library/weyl/help/figures/logo.png)
 
 To cite this work or the `weyl` package in publications please use
 Hankin ([2022b](#ref-hankin2022_weyl_arxiv)). In this short document I
@@ -350,7 +350,7 @@ weyl_prod_helper3
     ##     }
     ##     spray(ind, val, addrepeats = TRUE)
     ## }
-    ## <bytecode: 0x56499da4dbc0>
+    ## <bytecode: 0x6552081ceff0>
     ## <environment: namespace:weyl>
 
 Function

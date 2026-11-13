@@ -41,8 +41,8 @@ Robin K. S. Hankin
 #> {
 #>     S * x - x * S
 #> }
-#> <bytecode: 0x55c02eb2f588>
-#> <environment: 0x55c02eb32fc8>
+#> <bytecode: 0x5b9a46661f38>
+#> <environment: 0x5b9a46661b48>
 
 d1 <-rweyl(n=1,d=2)
 d2 <-rweyl(n=2,d=2)
