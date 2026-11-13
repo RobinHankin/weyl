@@ -12,7 +12,7 @@ vignette: >
 
 
 ```{r out.width='20%', out.extra='style="float:right; padding:10px"',echo=FALSE}
-knitr::include_graphics(system.file("help/figures/weyl.png", package = "weyl"))
+knitr::include_graphics(system.file("help/figures/logo.png", package = "weyl"))
 ```
 
 To cite this work or the `weyl` package in publications please use

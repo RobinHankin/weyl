@@ -70,7 +70,7 @@ on CRAN at \url{https://CRAN.R-project.org/package=weyl}.
 \setlength{\intextsep}{0pt}
 \begin{wrapfigure}{r}{0.2\textwidth}
   \begin{center}
-\includegraphics[width=1in]{weyl.png}
+\includegraphics[width=1in]{logo.png}
   \end{center}
 \end{wrapfigure}
 Consider the vector space ${\mathcal A}$ of linear operators on

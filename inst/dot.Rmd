@@ -10,7 +10,7 @@ library("weyl")
 ```
 
 <p style="text-align: right;">
-![](`r system.file("help/figures/weyl.png", package = "weyl")`){width=10%}
+![](`r system.file("help/figures/logo.png", package = "weyl")`){width=10%}
 </p>
 
 This short document introduces the dot object and shows how it can be

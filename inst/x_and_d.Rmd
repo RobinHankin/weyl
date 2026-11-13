@@ -11,7 +11,7 @@ options("digits" = 5)
 ```
 
 <p style="text-align: right;">
-![](`r system.file("help/figures/weyl.png", package = "weyl")`){width=10%}
+![](`r system.file("help/figures/logo.png", package = "weyl")`){width=10%}
 </p>
 
 
